@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!--Set application-wide security config using base-config tag.-->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">192.168.1.38</domain>
+        <domain includeSubdomains="true">shangchuan.566.com</domain>
+        <domain includeSubdomains="true">api.weixin.qq.com</domain>
+        <domain includeSubdomains="true">img02.exam8.com</domain>
+        <domain includeSubdomains="true">1-img.bokecc.com</domain>
+        <domain includeSubdomains="true">2-img.bokecc.com</domain>
+        <domain includeSubdomains="true">3-img.bokecc.com</domain>
+        <domain includeSubdomains="true">4-img.bokecc.com</domain>
+        <domain includeSubdomains="true">zjk.oss-cn-beijing.aliyuncs.com</domain>
+
+    </domain-config>
+</network-security-config>

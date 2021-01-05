@@ -1,0 +1,37 @@
+ext.compile_SdkVersion = 29
+ext.build_ToolsVersion =  "30.0.2"
+ext.min_SdkVersion = 21
+ext.target_SdkVersion = 29
+ext.version_Code = 1
+ext.version_Name = "1.0.0"
+ext.anko_version = "0.10.8"
+
+buildscript {
+    ext.kotlin_version = '1.4.10'
+    ext.objectboxVersion = '2.8.1'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+
+//        classpath "io.objectbox:objectbox-gradle-plugin:$objectboxVersion"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+        maven { url "https://oss.jfrog.org/libs-snapshot" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

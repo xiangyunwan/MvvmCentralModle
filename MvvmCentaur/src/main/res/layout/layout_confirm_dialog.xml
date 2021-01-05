@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_dialog_confirm_tile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="清除缓存"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/color_333333"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/color_eaedf2"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/tv_dialog_confirm_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="是否确认清除缓存"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="11dp"
+        android:textColor="@color/color_333333"
+        android:textSize="13sp"
+        android:gravity="left" />
+
+    <Button
+        android:id="@+id/bt_onebt_confirm"
+        android:layout_width="148dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="确定"
+        android:textSize="12sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_2f62c9_bt" />
+
+</LinearLayout>

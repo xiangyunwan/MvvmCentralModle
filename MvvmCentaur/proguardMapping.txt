@@ -1,0 +1,1119 @@
+# compiler: R8
+# compiler_version: 2.0.99
+# pg_map_id: 80100cb
+# common_typos_disable
+com.google.zxing.activity.NGCCaptureActivity -> com.google.zxing.activity.NGCCaptureActivity:
+    android.media.MediaPlayer$OnCompletionListener beepListener -> n
+    java.lang.String characterSet -> f
+    android.media.MediaPlayer mediaPlayer -> h
+    android.graphics.Bitmap scanBitmap -> m
+    boolean playBeep -> i
+    boolean vibrate -> j
+    com.google.zxing.decoding.CaptureActivityHandler handler -> a
+    java.lang.String photo_path -> l
+    com.google.zxing.view.ViewfinderView viewfinderView -> b
+    java.util.Vector decodeFormats -> e
+    android.widget.ImageView back -> c
+    com.google.zxing.decoding.InactivityTimer inactivityTimer -> g
+    android.app.ProgressDialog mProgress -> k
+    boolean hasSurface -> d
+    56:383:void <init>() -> <init>
+    56:56:java.lang.String access$000(com.google.zxing.activity.NGCCaptureActivity) -> a
+    191:218:com.google.zxing.Result scanningImage(java.lang.String) -> a
+    276:294:void handleDecode(com.google.zxing.Result,android.graphics.Bitmap) -> a
+    298:308:void initCamera(android.view.SurfaceHolder) -> a
+    340:342:void drawViewfinder() -> a
+    56:56:com.google.zxing.decoding.CaptureActivityHandler access$100(com.google.zxing.activity.NGCCaptureActivity) -> b
+    336:336:android.os.Handler getHandler() -> b
+    332:332:com.google.zxing.view.ViewfinderView getViewfinderView() -> c
+    345:366:void initBeepSound() -> d
+    371:378:void playBeepSoundAndVibrate() -> e
+    138:182:void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    83:101:void onCreate(android.os.Bundle) -> onCreate
+    119:119:boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    265:267:void onDestroy() -> onDestroy
+    133:133:boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    255:261:void onPause() -> onPause
+    223:251:void onResume() -> onResume
+    314:314:void surfaceChanged(android.view.SurfaceHolder,int,int,int) -> surfaceChanged
+    318:323:void surfaceCreated(android.view.SurfaceHolder) -> surfaceCreated
+    327:329:void surfaceDestroyed(android.view.SurfaceHolder) -> surfaceDestroyed
+com.google.zxing.activity.NGCCaptureActivity$1 -> com.google.zxing.activity.NGCCaptureActivity$a:
+    com.google.zxing.activity.NGCCaptureActivity this$0 -> a
+    89:89:void <init>(com.google.zxing.activity.NGCCaptureActivity) -> <init>
+    92:93:void onClick(android.view.View) -> onClick
+com.google.zxing.activity.NGCCaptureActivity$2 -> com.google.zxing.activity.NGCCaptureActivity$b:
+    com.google.zxing.activity.NGCCaptureActivity this$0 -> a
+    153:153:void <init>(com.google.zxing.activity.NGCCaptureActivity) -> <init>
+    156:176:void run() -> run
+com.google.zxing.activity.NGCCaptureActivity$3 -> com.google.zxing.activity.NGCCaptureActivity$c:
+    383:383:void <init>(com.google.zxing.activity.NGCCaptureActivity) -> <init>
+    385:386:void onCompletion(android.media.MediaPlayer) -> onCompletion
+com.google.zxing.camera.AutoFocusCallback -> a.a.a.a.a:
+    android.os.Handler autoFocusHandler -> a
+    java.lang.String TAG -> c
+    int autoFocusMessage -> b
+    26:26:void <clinit>() -> <clinit>
+    24:24:void <init>() -> <init>
+    34:36:void setHandler(android.os.Handler,int) -> a
+    39:46:void onAutoFocus(boolean,android.hardware.Camera) -> onAutoFocus
+com.google.zxing.camera.CameraConfigurationManager -> a.a.a.a.b:
+    java.util.regex.Pattern COMMA_PATTERN -> g
+    android.content.Context context -> a
+    java.lang.String TAG -> f
+    int previewFormat -> d
+    android.graphics.Point screenResolution -> b
+    android.graphics.Point cameraResolution -> c
+    java.lang.String previewFormatString -> e
+    31:36:void <clinit>() -> <clinit>
+    44:46:void <init>(android.content.Context) -> <init>
+    52:74:void initFromCameraParameters(android.hardware.Camera) -> a
+    95:95:android.graphics.Point getCameraResolution() -> a
+    112:132:android.graphics.Point getCameraResolution(android.hardware.Camera$Parameters,android.graphics.Point) -> a
+    136:174:android.graphics.Point findBestPreviewSizeValue(java.lang.CharSequence,android.graphics.Point) -> a
+    178:192:int findBestMotZoomValue(java.lang.CharSequence,int) -> a
+    201:208:void setFlash(android.hardware.Camera$Parameters) -> a
+    83:92:void setDesiredCameraParameters(android.hardware.Camera) -> b
+    103:103:int getPreviewFormat() -> b
+    212:272:void setZoom(android.hardware.Camera$Parameters) -> b
+    107:107:java.lang.String getPreviewFormatString() -> c
+    99:99:android.graphics.Point getScreenResolution() -> d
+com.google.zxing.camera.CameraManager -> a.a.a.a.c:
+    com.google.zxing.camera.CameraConfigurationManager configManager -> a
+    int SDK_INT -> k
+    com.google.zxing.camera.PreviewCallback previewCallback -> h
+    boolean initialized -> e
+    android.hardware.Camera camera -> b
+    boolean previewing -> f
+    boolean useOneShotPreviewCallback -> g
+    com.google.zxing.camera.AutoFocusCallback autoFocusCallback -> i
+    android.graphics.Rect framingRect -> c
+    com.google.zxing.camera.CameraManager cameraManager -> j
+    android.graphics.Rect framingRectInPreview -> d
+    37:57:void <clinit>() -> <clinit>
+    97:111:void <init>(android.content.Context) -> <init>
+    83:86:void init(android.content.Context) -> a
+    120:141:void openDriver(android.view.SurfaceHolder) -> a
+    147:152:void closeDriver() -> a
+    205:210:void requestAutoFocus(android.os.Handler,int) -> a
+    325:345:com.google.zxing.camera.PlanarYUVLuminanceSource buildLuminanceSource(byte[],int,int) -> a
+    94:94:com.google.zxing.camera.CameraManager get() -> b
+    188:196:void requestPreviewFrame(android.os.Handler,int) -> b
+    220:243:android.graphics.Rect getFramingRect() -> c
+    276:291:android.graphics.Rect getFramingRectInPreview() -> d
+    158:162:void startPreview() -> e
+    168:177:void stopPreview() -> f
+com.google.zxing.camera.FlashlightManager -> a.a.a.a.d:
+    java.lang.Object iHardwareService -> b
+    java.lang.reflect.Method setFlashEnabledMethod -> c
+    java.lang.String TAG -> a
+    39:52:void <clinit>() -> <clinit>
+    54:55:void <init>() -> <init>
+    66:67:void disableFlashlight() -> a
+    99:103:java.lang.reflect.Method getSetFlashEnabledMethod(java.lang.Object) -> a
+    108:114:java.lang.Class maybeForName(java.lang.String) -> a
+    120:126:java.lang.reflect.Method maybeGetMethod(java.lang.Class,java.lang.String,java.lang.Class[]) -> a
+    132:141:java.lang.Object invoke(java.lang.reflect.Method,java.lang.Object,java.lang.Object[]) -> a
+    146:149:void setFlashlight(boolean) -> a
+    62:63:void enableFlashlight() -> b
+    70:95:java.lang.Object getHardwareService() -> c
+com.google.zxing.camera.PlanarYUVLuminanceSource -> a.a.a.a.e:
+    byte[] yuvData -> a
+    int left -> d
+    int top -> e
+    int dataWidth -> b
+    int dataHeight -> c
+    42:53:void <init>(byte[],int,int,int,int,int,int) -> <init>
+    114:131:android.graphics.Bitmap renderCroppedGreyscaleBitmap() -> a
+    71:97:byte[] getMatrix() -> getMatrix
+    57:66:byte[] getRow(int,byte[]) -> getRow
+    102:102:boolean isCropSupported() -> isCropSupported
+com.google.zxing.camera.PreviewCallback -> a.a.a.a.f:
+    com.google.zxing.camera.CameraConfigurationManager configManager -> a
+    android.os.Handler previewHandler -> c
+    int previewMessage -> d
+    boolean useOneShotPreviewCallback -> b
+    java.lang.String TAG -> e
+    27:27:void <clinit>() -> <clinit>
+    34:37:void <init>(com.google.zxing.camera.CameraConfigurationManager,boolean) -> <init>
+    40:42:void setHandler(android.os.Handler,int) -> a
+    45:57:void onPreviewFrame(byte[],android.hardware.Camera) -> onPreviewFrame
+com.google.zxing.decoding.CaptureActivityHandler -> a.a.a.b.a:
+    com.google.zxing.decoding.CaptureActivityHandler$State state -> c
+    com.google.zxing.activity.NGCCaptureActivity activity -> a
+    com.google.zxing.decoding.DecodeThread decodeThread -> b
+    java.lang.String TAG -> d
+    42:42:void <clinit>() -> <clinit>
+    55:64:void <init>(com.google.zxing.activity.NGCCaptureActivity,java.util.Vector,java.lang.String) -> <init>
+    153:166:void quitSynchronously() -> a
+    169:175:void restartPreviewAndDecode() -> b
+    68:150:void handleMessage(android.os.Message) -> handleMessage
+com.google.zxing.decoding.CaptureActivityHandler$State -> a.a.a.b.a$a:
+    com.google.zxing.decoding.CaptureActivityHandler$State SUCCESS -> b
+    com.google.zxing.decoding.CaptureActivityHandler$State DONE -> c
+    com.google.zxing.decoding.CaptureActivityHandler$State PREVIEW -> a
+    com.google.zxing.decoding.CaptureActivityHandler$State[] $VALUES -> d
+    48:51:void <clinit>() -> <clinit>
+    48:48:void <init>(java.lang.String,int) -> <init>
+    48:48:com.google.zxing.decoding.CaptureActivityHandler$State valueOf(java.lang.String) -> valueOf
+    48:48:com.google.zxing.decoding.CaptureActivityHandler$State[] values() -> values
+com.google.zxing.decoding.DecodeFormatManager -> a.a.a.b.b:
+    java.util.Vector QR_CODE_FORMATS -> c
+    java.util.Vector ONE_D_FORMATS -> b
+    java.util.Vector PRODUCT_FORMATS -> a
+    java.util.Vector DATA_MATRIX_FORMATS -> d
+    31:54:void <clinit>() -> <clinit>
+com.google.zxing.decoding.DecodeHandler -> a.a.a.b.c:
+    com.google.zxing.MultiFormatReader multiFormatReader -> b
+    java.lang.String TAG -> c
+    com.google.zxing.activity.NGCCaptureActivity activity -> a
+    41:41:void <clinit>() -> <clinit>
+    46:50:void <init>(com.google.zxing.activity.NGCCaptureActivity,java.util.Hashtable) -> <init>
+    79:115:void decode(byte[],int,int) -> a
+    54:68:void handleMessage(android.os.Message) -> handleMessage
+com.google.zxing.decoding.DecodeThread -> a.a.a.b.d:
+    java.util.Hashtable hints -> b
+    android.os.Handler handler -> c
+    com.google.zxing.activity.NGCCaptureActivity activity -> a
+    java.util.concurrent.CountDownLatch handlerInitLatch -> d
+    46:67:void <init>(com.google.zxing.activity.NGCCaptureActivity,java.util.Vector,java.lang.String,com.google.zxing.ResultPointCallback) -> <init>
+    71:75:android.os.Handler getHandler() -> a
+    80:84:void run() -> run
+com.google.zxing.decoding.FinishListener -> a.a.a.b.e:
+    android.app.Activity activityToFinish -> a
+    30:32:void <init>(android.app.Activity) -> <init>
+    35:36:void onCancel(android.content.DialogInterface) -> onCancel
+    39:40:void onClick(android.content.DialogInterface,int) -> onClick
+    43:44:void run() -> run
+com.google.zxing.decoding.InactivityTimer -> a.a.a.b.f:
+    java.util.concurrent.ScheduledFuture inactivityFuture -> c
+    java.util.concurrent.ScheduledExecutorService inactivityTimer -> a
+    android.app.Activity activity -> b
+    34:42:void <init>(android.app.Activity) -> <init>
+    52:56:void cancel() -> a
+    45:49:void onActivity() -> b
+    59:61:void shutdown() -> c
+com.google.zxing.decoding.InactivityTimer$1 -> a.a.a.b.f$a:
+com.google.zxing.decoding.InactivityTimer$DaemonThreadFactory -> a.a.a.b.f$b:
+    63:63:void <init>() -> <init>
+    63:63:void <init>(com.google.zxing.decoding.InactivityTimer$1) -> <init>
+    65:67:java.lang.Thread newThread(java.lang.Runnable) -> newThread
+com.google.zxing.decoding.RGBLuminanceSource -> a.a.a.b.g:
+    byte[] luminances -> a
+    39:68:void <init>(android.graphics.Bitmap) -> <init>
+    90:90:byte[] getMatrix() -> getMatrix
+    73:82:byte[] getRow(int,byte[]) -> getRow
+com.google.zxing.view.ViewfinderResultPointCallback -> com.google.zxing.view.a:
+    com.google.zxing.view.ViewfinderView viewfinderView -> a
+    25:27:void <init>(com.google.zxing.view.ViewfinderView) -> <init>
+    30:31:void foundPossibleResultPoint(com.google.zxing.ResultPoint) -> foundPossibleResultPoint
+com.google.zxing.view.ViewfinderView -> com.google.zxing.view.ViewfinderView:
+    int scannerStart -> n
+    int scannerEnd -> o
+    float labelTextSize -> k
+    java.lang.String labelText -> i
+    int labelTextColor -> j
+    int resultPointColor -> h
+    int laserColor -> f
+    java.util.Collection lastPossibleResultPoints -> m
+    int cornerColor -> g
+    int resultColor -> d
+    int frameColor -> e
+    java.util.Collection possibleResultPoints -> l
+    int maskColor -> c
+    android.graphics.Bitmap resultBitmap -> b
+    android.graphics.Paint paint -> a
+    52:81:void <clinit>() -> <clinit>
+    88:109:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    182:195:void drawCorner(android.graphics.Canvas,android.graphics.Rect) -> a
+    246:248:int shadeColor(int) -> a
+    262:267:void drawExterior(android.graphics.Canvas,android.graphics.Rect,int,int) -> a
+    270:272:void drawViewfinder() -> a
+    285:286:void addPossibleResultPoint(com.google.zxing.ResultPoint) -> a
+    253:258:void drawFrame(android.graphics.Canvas,android.graphics.Rect) -> b
+    200:242:void drawLaserScanner(android.graphics.Canvas,android.graphics.Rect) -> c
+    173:177:void drawTextInfo(android.graphics.Canvas,android.graphics.Rect) -> d
+    114:169:void onDraw(android.graphics.Canvas) -> onDraw
+com.mobile.centaur.apis.Bridge_BaseComponentApis -> a.b.a.a.a:
+    52:56:void <init>(com.mobile.centaur.h5container.webview.BridgeWebView,androidx.fragment.app.FragmentActivity,com.mobile.centaur.h5container.control.Bridge_CommonListener) -> <init>
+com.mobile.centaur.base.ActivityCollector -> com.mobile.centaur.base.a:
+    java.util.HashMap activities -> a
+    23:23:void <clinit>() -> <clinit>
+    32:33:void addActivity(android.app.Activity,java.lang.Class) -> a
+    42:46:void removeActivity(android.app.Activity) -> a
+com.mobile.centaur.base.BaseActivity -> com.mobile.centaur.base.BaseActivity:
+    com.gyf.barlibrary.ImmersionBar mImmersionBar -> c
+    android.app.Activity activity -> d
+    android.view.View view -> a
+    com.mobile.centaur.base.BasePresenter mPresenter -> b
+    25:25:void <init>() -> <init>
+    int getLayoutId() -> a
+    94:95:android.view.View getView() -> b
+    53:60:void initCommonData() -> c
+    void initData() -> d
+    void initListener() -> e
+    com.mobile.centaur.base.BasePresenter initPresenter() -> f
+    void initView() -> g
+    36:47:void onCreate(android.os.Bundle) -> onCreate
+    151:161:void onDestroy() -> onDestroy
+    135:147:void onGetMessage(com.mobile.centaur.mode.ProgressEventBusBean) -> onGetMessage
+    123:125:void onResume() -> onResume
+    129:131:void onStop() -> onStop
+com.mobile.centaur.base.BaseApplication -> com.mobile.centaur.base.BaseApplication:
+    android.content.Context mContext -> a
+    8:8:void <init>() -> <init>
+    19:19:android.content.Context getContext() -> a
+    13:16:void onCreate() -> onCreate
+com.mobile.centaur.base.BasePresenter -> com.mobile.centaur.base.b:
+    void attachView(com.mobile.centaur.base.IBaseView) -> a
+    void detachView() -> a
+com.mobile.centaur.base.IBaseView -> com.mobile.centaur.base.c:
+com.mobile.centaur.h5container.Bridge_ApiManager -> a.b.a.b.a:
+    com.mobile.centaur.h5container.webview.BridgeWebView mWebView -> a
+    22:41:void init(com.mobile.centaur.h5container.webview.BridgeWebView,androidx.fragment.app.FragmentActivity) -> a
+com.mobile.centaur.h5container.control.Bridge_CommonListener -> a.b.a.b.b.a:
+com.mobile.centaur.h5container.model.ScanResult -> a.b.a.b.c.a:
+    3:3:void <init>() -> <init>
+com.mobile.centaur.h5container.ui.Bridge_WebViewActivity -> com.mobile.centaur.h5container.ui.Bridge_WebViewActivity:
+    android.widget.RelativeLayout rlTitle -> h
+    android.widget.ImageView iv_more -> f
+    android.widget.ImageView iv_close -> g
+    android.widget.ProgressBar mProgressBar -> a
+    android.widget.TextView tvTitle -> c
+    boolean showTitleLoading -> j
+    android.widget.TextView option_title -> d
+    com.mobile.centaur.h5container.webview.BridgeWebView webView -> b
+    android.widget.ImageView iv_back -> e
+    com.mobile.centaur.h5container.webview.CallBackFunction function -> i
+    46:46:void <init>() -> <init>
+    46:46:android.widget.ProgressBar access$000(com.mobile.centaur.h5container.ui.Bridge_WebViewActivity) -> a
+    76:76:void initCustom() -> a
+    193:205:android.content.pm.PackageInfo getPackageInfo(android.content.Context) -> a
+    46:46:android.widget.TextView access$100(com.mobile.centaur.h5container.ui.Bridge_WebViewActivity) -> b
+    87:154:void initParam() -> b
+    157:160:void initStrictMode() -> c
+    164:183:void initView() -> d
+    81:81:void setUserAgent() -> e
+    383:403:void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    210:240:void onClick(android.view.View) -> onClick
+    63:73:void onCreate(android.os.Bundle) -> onCreate
+    187:190:void onDestroy() -> onDestroy
+com.mobile.centaur.h5container.ui.Bridge_WebViewActivity$1 -> com.mobile.centaur.h5container.ui.Bridge_WebViewActivity$a:
+    224:224:void <init>(com.mobile.centaur.h5container.ui.Bridge_WebViewActivity) -> <init>
+    228:228:void onCallBack(java.lang.String) -> a
+com.mobile.centaur.h5container.ui.Bridge_WebViewActivity$2 -> com.mobile.centaur.h5container.ui.Bridge_WebViewActivity$b:
+    232:232:void <init>(com.mobile.centaur.h5container.ui.Bridge_WebViewActivity) -> <init>
+    236:236:void onCallBack(java.lang.String) -> a
+com.mobile.centaur.h5container.ui.Bridge_WebViewActivity$WebChromeClient -> com.mobile.centaur.h5container.ui.Bridge_WebViewActivity$c:
+    com.mobile.centaur.h5container.ui.Bridge_WebViewActivity this$0 -> a
+    243:243:void <init>(com.mobile.centaur.h5container.ui.Bridge_WebViewActivity) -> <init>
+    266:269:void onGeolocationPermissionsShowPrompt(java.lang.String,android.webkit.GeolocationPermissions$Callback) -> onGeolocationPermissionsShowPrompt
+    247:262:void onProgressChanged(android.webkit.WebView,int) -> onProgressChanged
+    273:277:void onReceivedTitle(android.webkit.WebView,java.lang.String) -> onReceivedTitle
+com.mobile.centaur.h5container.ui.DemoActivity -> com.mobile.centaur.h5container.ui.DemoActivity:
+    com.mobile.centaur.h5container.webview.BridgeWebView webView -> a
+    20:21:void <init>() -> <init>
+    27:55:void onCreate(android.os.Bundle) -> onCreate
+com.mobile.centaur.h5container.ui.DemoActivity$1 -> com.mobile.centaur.h5container.ui.DemoActivity$a:
+    35:35:void <init>(com.mobile.centaur.h5container.ui.DemoActivity) -> <init>
+com.mobile.centaur.h5container.utils.Birdge_HashMapUtil -> a.b.a.b.d.a:
+    java.util.HashMap map -> a
+    9:9:void <clinit>() -> <clinit>
+    20:21:void release() -> a
+com.mobile.centaur.h5container.webview.BridgeHandler -> com.mobile.centaur.h5container.webview.a:
+    void handler(java.lang.String,com.mobile.centaur.h5container.webview.CallBackFunction) -> a
+com.mobile.centaur.h5container.webview.BridgeUtil -> com.mobile.centaur.h5container.webview.b:
+    32:49:java.lang.String getDataFromReturnUrl(java.lang.String) -> a
+    86:88:void webViewLoadLocalJs(android.webkit.WebView,java.lang.String) -> a
+    98:125:java.lang.String assetFile2Str(android.content.Context,java.lang.String) -> a
+    56:62:java.lang.String getFunctionFromReturnUrl(java.lang.String) -> b
+    26:26:java.lang.String parseFunctionName(java.lang.String) -> c
+com.mobile.centaur.h5container.webview.BridgeWebView -> com.mobile.centaur.h5container.webview.BridgeWebView:
+    java.util.Map responseCallbacks -> a
+    java.util.Map messageHandlers -> b
+    long uniqueId -> e
+    java.util.List startupMessage -> d
+    com.mobile.centaur.h5container.webview.BridgeHandler defaultHandler -> c
+    android.view.View closeView -> f
+    23:51:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    23:56:void <init>(android.content.Context,android.util.AttributeSet,int) -> <init>
+    23:61:void <init>(android.content.Context) -> <init>
+    21:21:void access$000(com.mobile.centaur.h5container.webview.BridgeWebView,com.mobile.centaur.h5container.webview.Message) -> a
+    91:99:void handlerReturnData(java.lang.String) -> a
+    171:191:void dispatchMessage(com.mobile.centaur.h5container.webview.Message) -> a
+    197:259:void flushMessageQueue() -> a
+    263:266:void loadUrl(java.lang.String,com.mobile.centaur.h5container.webview.CallBackFunction) -> a
+    302:303:void callHandler(java.lang.String,java.lang.String,com.mobile.centaur.h5container.webview.CallBackFunction) -> a
+    307:311:void onPageFinished(boolean) -> a
+    82:82:com.mobile.centaur.h5container.webview.BridgeWebViewClient generateBridgeWebViewClient() -> b
+    119:132:void doSend(java.lang.String,java.lang.String,com.mobile.centaur.h5container.webview.CallBackFunction) -> b
+    140:145:void queueMessage(com.mobile.centaur.h5container.webview.Message) -> b
+    72:79:void init() -> c
+    33:33:java.util.List getStartupMessage() -> getStartupMessage
+    45:46:void setCloseView(android.view.View) -> setCloseView
+    68:69:void setDefaultHandler(com.mobile.centaur.h5container.webview.BridgeHandler) -> setDefaultHandler
+    37:38:void setStartupMessage(java.util.List) -> setStartupMessage
+com.mobile.centaur.h5container.webview.BridgeWebView$1 -> com.mobile.centaur.h5container.webview.BridgeWebView$a:
+    com.mobile.centaur.h5container.webview.BridgeWebView this$0 -> a
+    198:198:void <init>(com.mobile.centaur.h5container.webview.BridgeWebView) -> <init>
+    203:256:void onCallBack(java.lang.String) -> a
+com.mobile.centaur.h5container.webview.BridgeWebView$1$1 -> com.mobile.centaur.h5container.webview.BridgeWebView$a$a:
+    com.mobile.centaur.h5container.webview.BridgeWebView$1 this$1 -> b
+    java.lang.String val$callbackId -> a
+    227:227:void <init>(com.mobile.centaur.h5container.webview.BridgeWebView$1,java.lang.String) -> <init>
+    230:234:void onCallBack(java.lang.String) -> a
+com.mobile.centaur.h5container.webview.BridgeWebView$1$2 -> com.mobile.centaur.h5container.webview.BridgeWebView$a$b:
+    237:237:void <init>(com.mobile.centaur.h5container.webview.BridgeWebView$1) -> <init>
+    241:241:void onCallBack(java.lang.String) -> a
+com.mobile.centaur.h5container.webview.BridgeWebViewClient -> com.mobile.centaur.h5container.webview.c:
+    com.mobile.centaur.h5container.webview.WebViewTitleControl onPageFinishedLis -> b
+    com.mobile.centaur.h5container.webview.BridgeWebView webView -> a
+    22:25:void <init>(com.mobile.centaur.h5container.webview.BridgeWebView) -> <init>
+    104:119:void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
+    98:100:void onPageStarted(android.webkit.WebView,java.lang.String,android.graphics.Bitmap) -> onPageStarted
+    29:66:boolean shouldOverrideUrlLoading(android.webkit.WebView,java.lang.String) -> shouldOverrideUrlLoading
+    75:92:boolean shouldOverrideUrlLoading(android.webkit.WebView,android.webkit.WebResourceRequest) -> shouldOverrideUrlLoading
+com.mobile.centaur.h5container.webview.CallBackFunction -> com.mobile.centaur.h5container.webview.d:
+    void onCallBack(java.lang.String) -> a
+com.mobile.centaur.h5container.webview.DefaultHandler -> com.mobile.centaur.h5container.webview.e:
+    3:5:void <init>() -> <init>
+    9:12:void handler(java.lang.String,com.mobile.centaur.h5container.webview.CallBackFunction) -> a
+com.mobile.centaur.h5container.webview.Message -> com.mobile.centaur.h5container.webview.f:
+    java.lang.String callbackId -> a
+    java.lang.String responseData -> c
+    java.lang.String responseId -> b
+    java.lang.String handlerName -> e
+    java.lang.String data -> d
+    18:18:void <init>() -> <init>
+    49:49:java.lang.String getCallbackId() -> a
+    53:54:void setCallbackId(java.lang.String) -> a
+    57:57:java.lang.String getData() -> b
+    61:62:void setData(java.lang.String) -> b
+    65:65:java.lang.String getHandlerName() -> c
+    69:70:void setHandlerName(java.lang.String) -> c
+    41:41:java.lang.String getResponseData() -> d
+    45:46:void setResponseData(java.lang.String) -> d
+    33:33:java.lang.String getResponseId() -> e
+    37:38:void setResponseId(java.lang.String) -> e
+    73:90:java.lang.String toJson() -> f
+    110:126:java.util.List toArrayList(java.lang.String) -> f
+com.mobile.centaur.h5container.webview.WebViewTitleControl -> com.mobile.centaur.h5container.webview.g:
+    void onPageFinished(boolean) -> a
+com.mobile.centaur.mode.ProgressEventBusBean -> a.b.a.c.a:
+    boolean showProgress -> a
+com.mobile.centaur.utils.DensityUtil -> a.b.a.d.a:
+    25:26:int dp2px(android.content.Context,float) -> a
+com.mobile.centaur.utils.DialogUtils -> a.b.a.d.b:
+    androidx.appcompat.app.AlertDialog progressDiaglog -> b
+    androidx.appcompat.app.AlertDialog twoButtondiaglog -> a
+    com.mobile.centaur.utils.DialogUtils dialogUtils -> c
+    35:36:void <init>() -> <init>
+    188:229:void showProgressDialog(android.app.Activity) -> a
+    246:249:void dismissProgressDiaglog() -> a
+    239:243:void dismissTwoBtDialog() -> b
+    39:42:com.mobile.centaur.utils.DialogUtils getInstance() -> c
+com.mobile.centaur.utils.GlideUtils -> a.b.a.d.c:
+    42:43:void <clinit>() -> <clinit>
+    330:331:void loadLocalImageAsBitmap(android.content.Context,int,android.widget.ImageView) -> a
+com.mobile.centaur.utils.LogUtils -> a.b.a.d.d:
+    48:51:void i(java.lang.String,java.lang.String) -> a
+    85:85:void addRecord(java.lang.String) -> a
+    35:37:void d(java.lang.String) -> b
+com.mobile.centaur.utils.NetworkUtil -> a.b.a.d.e:
+    18:22:void <clinit>() -> <clinit>
+    32:39:boolean isNetworkAvailable(android.content.Context) -> a
+com.mobile.centaur.utils.ProgressUtil -> a.b.a.d.f:
+    android.app.ProgressDialog infoDialog -> b
+    com.mobile.centaur.utils.ProgressUtil instance -> a
+    13:14:void <init>() -> <init>
+    11:11:android.app.ProgressDialog access$000() -> a
+    41:63:android.app.ProgressDialog showDialog(android.app.Activity,java.lang.String,java.lang.Integer) -> a
+    92:96:void dismissDialog() -> b
+    24:31:com.mobile.centaur.utils.ProgressUtil getInstance() -> c
+com.mobile.centaur.utils.ProgressUtil$1 -> a.b.a.d.f$a:
+    android.app.Activity val$context -> a
+    46:46:void <init>(com.mobile.centaur.utils.ProgressUtil,android.app.Activity) -> <init>
+    49:52:void run() -> run
+com.mobile.centaur.utils.StatusBarUtil -> a.b.a.d.g:
+    int FAKE_STATUS_BAR_VIEW_ID -> a
+    24:25:void <clinit>() -> <clinit>
+    150:151:void setColorNoTranslucent(android.app.Activity,int) -> a
+    589:595:android.view.View createStatusBarView(android.app.Activity,int,int) -> a
+    602:610:void setRootView(android.app.Activity) -> a
+    667:668:int getStatusBarHeight(android.content.Context) -> a
+    679:689:int calculateStatusColor(int,int) -> a
+    73:91:void setColor(android.app.Activity,int,int) -> b
+com.mobile.centaur.utils.XAImageLoaderUtil -> a.b.a.d.h:
+    com.mobile.centaur.utils.XAImageLoaderUtil instance -> a
+    16:18:void <init>() -> <init>
+    21:28:com.mobile.centaur.utils.XAImageLoaderUtil getInstance() -> a
+    39:40:void load(android.content.Context,java.lang.String,android.widget.ImageView) -> a
+com.mobile.centaur.views.BottomTabNavigation -> com.mobile.centaur.views.BottomTabNavigation:
+    android.content.Context mContext -> a
+    java.util.List tabList -> b
+    com.mobile.centaur.views.BottomTabNavigation$TabSelectedListener tabSelectedListener -> c
+    java.lang.String selectedTabType -> d
+    42:43:void <init>(android.content.Context) -> <init>
+    46:47:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    50:51:void <init>(android.content.Context,android.util.AttributeSet,int) -> <init>
+    32:57:void <init>(android.content.Context,android.util.AttributeSet,int,int) -> <init>
+    99:101:android.widget.Space getSideSpaceView() -> getSideSpaceView
+    93:95:android.widget.Space getSpaceView() -> getSpaceView
+    106:126:void onClick(android.view.View) -> onClick
+    66:90:void setTabItems(java.util.List) -> setTabItems
+com.mobile.centaur.views.BottomTabNavigation$TabSelectedListener -> com.mobile.centaur.views.BottomTabNavigation$a:
+    void tabSelected(com.mobile.centaur.views.TabItemView) -> a
+    void tabUnselected(com.mobile.centaur.views.TabItemView) -> b
+com.mobile.centaur.views.BottomTabNavigation2 -> com.mobile.centaur.views.BottomTabNavigation2:
+    android.content.Context mContext -> a
+    java.util.List tabList -> b
+    com.mobile.centaur.views.BottomTabNavigation2$TabSelectedListener tabSelectedListener -> c
+    java.lang.String selectedTabType -> d
+    46:47:void <init>(android.content.Context) -> <init>
+    50:51:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    54:55:void <init>(android.content.Context,android.util.AttributeSet,int) -> <init>
+    35:61:void <init>(android.content.Context,android.util.AttributeSet,int,int) -> <init>
+    94:96:android.widget.Space getSpaceView() -> getSpaceView
+    101:121:void onClick(android.view.View) -> onClick
+    71:91:void setTabItems(java.util.List) -> setTabItems
+com.mobile.centaur.views.BottomTabNavigation2$TabSelectedListener -> com.mobile.centaur.views.BottomTabNavigation2$a:
+    void tabSelected(com.mobile.centaur.views.TabItemView) -> a
+    void tabUnselected(com.mobile.centaur.views.TabItemView) -> b
+com.mobile.centaur.views.ClearEditTextView -> com.mobile.centaur.views.ClearEditTextView:
+    android.graphics.drawable.Drawable mClearDrawable -> a
+    30:31:void <init>(android.content.Context) -> <init>
+    34:35:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    38:40:void <init>(android.content.Context,android.util.AttributeSet,int) -> <init>
+    43:53:void init() -> a
+    102:102:void afterTextChanged(android.text.Editable) -> afterTextChanged
+    97:97:void beforeTextChanged(java.lang.CharSequence,int,int,int) -> beforeTextChanged
+    72:77:void onFocusChange(android.view.View,boolean) -> onFocusChange
+    90:92:void onTextChanged(java.lang.CharSequence,int,int,int) -> onTextChanged
+    112:126:boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    59:62:void setClearIcon(boolean) -> setClearIcon
+com.mobile.centaur.views.ImageItem -> com.mobile.centaur.views.a:
+    java.lang.String path -> a
+    long time -> c
+    java.lang.String name -> b
+    32:36:void <init>(java.lang.String,java.lang.String,long) -> <init>
+    65:70:boolean equals(java.lang.Object) -> equals
+    75:75:java.lang.String toString() -> toString
+com.mobile.centaur.views.KeyboardLayout -> com.mobile.centaur.views.KeyboardLayout:
+    com.mobile.centaur.views.KeyboardLayout$KeyboardLayoutListener mListener -> a
+    boolean mIsKeyboardActive -> b
+    int mKeyboardHeight -> c
+    18:19:void <init>(android.content.Context) -> <init>
+    22:23:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    14:29:void <init>(android.content.Context,android.util.AttributeSet,int) -> <init>
+    11:11:int access$102(com.mobile.centaur.views.KeyboardLayout,int) -> a
+    11:11:boolean access$202(com.mobile.centaur.views.KeyboardLayout,boolean) -> a
+    11:11:com.mobile.centaur.views.KeyboardLayout$KeyboardLayoutListener access$300(com.mobile.centaur.views.KeyboardLayout) -> a
+    49:49:int getKeyboardHeight() -> getKeyboardHeight
+    36:36:com.mobile.centaur.views.KeyboardLayout$KeyboardLayoutListener getKeyboardListener() -> getKeyboardListener
+    32:33:void setKeyboardListener(com.mobile.centaur.views.KeyboardLayout$KeyboardLayoutListener) -> setKeyboardListener
+com.mobile.centaur.views.KeyboardLayout$1 -> com.mobile.centaur.views.KeyboardLayout$a:
+com.mobile.centaur.views.KeyboardLayout$KeyboardLayoutListener -> com.mobile.centaur.views.KeyboardLayout$b:
+    void onKeyboardStateChanged(boolean,int) -> a
+com.mobile.centaur.views.KeyboardLayout$KeyboardOnGlobalChangeListener -> com.mobile.centaur.views.KeyboardLayout$c:
+    com.mobile.centaur.views.KeyboardLayout this$0 -> b
+    int mScreenHeight -> a
+    60:62:void <init>(com.mobile.centaur.views.KeyboardLayout) -> <init>
+    60:60:void <init>(com.mobile.centaur.views.KeyboardLayout,com.mobile.centaur.views.KeyboardLayout$1) -> <init>
+    65:70:int getScreenHeight() -> a
+    75:89:void onGlobalLayout() -> onGlobalLayout
+com.mobile.centaur.views.TabItem -> com.mobile.centaur.views.b:
+    java.lang.String getName() -> a
+    java.lang.String getTabType() -> b
+    int getAnimateRes() -> c
+    int getStaticRes() -> d
+com.mobile.centaur.views.TabItemView -> com.mobile.centaur.views.TabItemView:
+    android.content.Context mContext -> a
+    android.widget.TextView mTabNameView -> b
+    int mSelectedTextColor -> h
+    int mUnSelectedTextColor -> i
+    int mTabAnimateRes -> f
+    boolean isSelected -> g
+    int mTabStaticRes -> e
+    com.airbnb.lottie.LottieAnimationView mTabLottieView -> c
+    java.lang.String mTabName -> d
+    40:41:void <init>(android.content.Context) -> <init>
+    44:45:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    48:49:void <init>(android.content.Context,android.util.AttributeSet,int) -> <init>
+    52:64:void <init>(android.content.Context,android.util.AttributeSet,int,int) -> <init>
+    67:71:void init() -> a
+    116:117:com.mobile.centaur.views.TabItemView setAnimateIcon(int) -> a
+    121:123:com.mobile.centaur.views.TabItemView setTabName(java.lang.String) -> a
+    133:135:com.mobile.centaur.views.TabItemView setTabSelected(boolean) -> a
+    74:81:void setSelectedUI() -> b
+    111:112:com.mobile.centaur.views.TabItemView setStaticIcon(int) -> b
+    84:89:void setUnselectedUI() -> c
+    92:97:void updateUI() -> d
+com.mobile.centaur.widget.Loading_view -> a.b.a.e.a:
+    16:17:void <init>(android.content.Context,int) -> <init>
+    27:36:void init(android.content.Context) -> a
+    40:41:void dismiss() -> dismiss
+    21:24:void onCreate(android.os.Bundle) -> onCreate
+com.pizidea.imagepicker.AndroidImagePicker -> a.c.a.a:
+    java.lang.String mCurrentPhotoPath -> f
+    int mCurrentSelectedImageSetPosition -> k
+    int selectMode -> d
+    int cropSize -> b
+    int selectLimit -> c
+    com.pizidea.imagepicker.AndroidImagePicker$OnImagePickCompleteListener mOnImagePickCompleteListener -> i
+    com.pizidea.imagepicker.AndroidImagePicker mInstance -> m
+    boolean shouldShowCamera -> e
+    java.util.List mImageSets -> j
+    java.util.List mImageCropCompleteListeners -> h
+    java.util.List mImageSelectedChangeListeners -> g
+    boolean cropMode -> a
+    java.util.Set mSelectedImages -> l
+    53:53:void <clinit>() -> <clinit>
+    52:218:void <init>() -> <init>
+    120:126:void addOnImageSelectedChangeListener(com.pizidea.imagepicker.AndroidImagePicker$OnImageSelectedChangeListener) -> a
+    137:149:void notifyImageSelectedChanged(int,com.mobile.centaur.views.ImageItem,boolean) -> a
+    157:163:void addOnImageCropCompleteListener(com.pizidea.imagepicker.AndroidImagePicker$OnImageCropCompleteListener) -> a
+    175:182:void notifyImageCropComplete(android.graphics.Bitmap,int) -> a
+    233:234:void setImageSets(java.util.List) -> a
+    237:241:void clearImageSets() -> a
+    248:249:void setCurrentSelectedImageSetPosition(int) -> a
+    253:256:void addSelectedImageItem(int,com.mobile.centaur.views.ImageItem) -> a
+    310:350:android.graphics.Bitmap makeCropBitmap(android.graphics.Bitmap,android.graphics.Rect,android.graphics.RectF,int) -> a
+    360:380:java.io.File createImageSaveFile(android.content.Context) -> a
+    412:428:void takePicture(androidx.fragment.app.Fragment,int) -> a
+    437:443:void galleryAddPic(android.content.Context,java.lang.String) -> a
+    129:134:void removeOnImageItemSelectedChangeListener(com.pizidea.imagepicker.AndroidImagePicker$OnImageSelectedChangeListener) -> b
+    166:171:void removeOnImageCropCompleteListener(com.pizidea.imagepicker.AndroidImagePicker$OnImageCropCompleteListener) -> b
+    259:262:void deleteSelectedImageItem(int,com.mobile.centaur.views.ImageItem) -> b
+    302:306:void clearSelectedImages() -> b
+    111:111:java.lang.String getCurrentPhotoPath() -> c
+    265:265:boolean isSelect(int,com.mobile.centaur.views.ImageItem) -> c
+    225:228:java.util.List getImageItemsOfCurrentImageSet() -> d
+    68:75:com.pizidea.imagepicker.AndroidImagePicker getInstance() -> e
+    269:272:int getSelectImageCount() -> f
+    81:81:int getSelectLimit() -> g
+    91:91:int getSelectMode() -> h
+    296:298:java.util.List getSelectedImages() -> i
+    101:101:boolean isShouldShowCamera() -> j
+    207:212:void notifyOnImagePickComplete() -> k
+com.pizidea.imagepicker.AndroidImagePicker$OnImageCropCompleteListener -> a.c.a.a$a:
+    void onImageCropComplete(android.graphics.Bitmap,float) -> a
+com.pizidea.imagepicker.AndroidImagePicker$OnImagePickCompleteListener -> a.c.a.a$b:
+    void onImagePickComplete(java.util.List) -> a
+com.pizidea.imagepicker.AndroidImagePicker$OnImageSelectedChangeListener -> a.c.a.a$c:
+    void onImageSelectChange(int,com.mobile.centaur.views.ImageItem,int,int) -> a
+com.pizidea.imagepicker.GlideImgLoader -> a.c.a.b:
+    30:30:void <init>() -> <init>
+    33:34:void onPresentImage(android.widget.ImageView,java.lang.String,int) -> a
+com.pizidea.imagepicker.ImgLoader -> a.c.a.c:
+    void onPresentImage(android.widget.ImageView,java.lang.String,int) -> a
+com.pizidea.imagepicker.PicassoImgLoader -> a.c.a.d:
+    31:31:void <init>() -> <init>
+    44:45:void onPresentImage(android.widget.ImageView,java.lang.String,int) -> a
+com.pizidea.imagepicker.PiziUtil -> a.c.a.e:
+    43:44:int dp2px(android.content.Context,float) -> a
+    48:53:boolean isStorageEnable() -> a
+    59:72:android.graphics.Bitmap rotate(android.graphics.Bitmap,int) -> a
+com.pizidea.imagepicker.bean.ImageSet -> a.c.a.f.a:
+    java.util.List imageItems -> d
+    java.lang.String name -> a
+    com.mobile.centaur.views.ImageItem cover -> c
+    java.lang.String path -> b
+    30:30:void <init>() -> <init>
+    39:44:boolean equals(java.lang.Object) -> equals
+com.pizidea.imagepicker.data.DataSource -> a.c.a.g.a:
+    void provideMediaItems(com.pizidea.imagepicker.data.OnImagesLoadedListener) -> a
+com.pizidea.imagepicker.data.OnImagesLoadedListener -> a.c.a.g.b:
+    void onImagesLoaded(java.util.List) -> a
+com.pizidea.imagepicker.data.impl.LocalDataSource -> a.c.a.g.c.a:
+    android.content.Context mContext -> c
+    com.pizidea.imagepicker.data.OnImagesLoadedListener imagesLoadedListener -> b
+    java.util.ArrayList mImageSetList -> d
+    java.lang.String[] IMAGE_PROJECTION -> a
+    49:76:void <init>(android.content.Context) -> <init>
+    66:72:void provideMediaItems(com.pizidea.imagepicker.data.OnImagesLoadedListener) -> a
+    97:150:void onLoadFinished(androidx.loader.content.Loader,android.database.Cursor) -> a
+    80:92:androidx.loader.content.Loader onCreateLoader(int,android.os.Bundle) -> onCreateLoader
+    47:47:void onLoadFinished(androidx.loader.content.Loader,java.lang.Object) -> onLoadFinished
+    154:154:void onLoaderReset(androidx.loader.content.Loader) -> onLoaderReset
+com.pizidea.imagepicker.ui.AvatarCropFragment -> a.c.a.h.a:
+    java.lang.String picPath -> f
+    com.pizidea.imagepicker.widget.SuperImageView superImageView -> b
+    android.widget.FrameLayout rootView -> e
+    com.pizidea.imagepicker.ImgLoader mImagePresenter -> g
+    int screenWidth -> d
+    android.app.Activity mContext -> a
+    com.pizidea.imagepicker.widget.AvatarRectView mRectView -> c
+    51:59:void <init>() -> <init>
+    106:113:void initView(android.view.View) -> a
+    122:135:android.graphics.Bitmap getCropBitmap(int) -> a
+    69:72:void onCreate(android.os.Bundle) -> onCreate
+    77:96:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+com.pizidea.imagepicker.ui.ImagePreviewFragment -> a.c.a.h.b:
+    com.pizidea.imagepicker.ui.ImagePreviewFragment$TouchImageAdapter mAdapter -> c
+    java.lang.String TAG -> i
+    com.pizidea.imagepicker.ImgLoader mImagePresenter -> g
+    java.util.List mImageList -> d
+    androidx.viewpager.widget.ViewPager mViewPager -> b
+    boolean enableSingleTap -> f
+    com.pizidea.imagepicker.AndroidImagePicker androidImagePicker -> h
+    int mCurrentItemPosition -> e
+    android.app.Activity mContext -> a
+    53:53:void <clinit>() -> <clinit>
+    52:63:void <init>() -> <init>
+    52:52:int access$000(com.pizidea.imagepicker.ui.ImagePreviewFragment) -> a
+    52:52:int access$002(com.pizidea.imagepicker.ui.ImagePreviewFragment,int) -> a
+    52:52:java.lang.String access$200() -> a
+    89:125:void initView(android.view.View) -> a
+    131:143:void selectCurrent(boolean) -> a
+    52:52:boolean access$300(com.pizidea.imagepicker.ui.ImagePreviewFragment) -> b
+    70:75:void onCreate(android.os.Bundle) -> onCreate
+    80:85:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+com.pizidea.imagepicker.ui.ImagePreviewFragment$1 -> a.c.a.h.b$a:
+    com.pizidea.imagepicker.ui.ImagePreviewFragment this$0 -> a
+    101:101:void <init>(com.pizidea.imagepicker.ui.ImagePreviewFragment) -> <init>
+    121:121:void onPageScrollStateChanged(int) -> onPageScrollStateChanged
+    104:104:void onPageScrolled(int,float,int) -> onPageScrolled
+    108:117:void onPageSelected(int) -> onPageSelected
+com.pizidea.imagepicker.ui.ImagePreviewFragment$OnImagePageSelectedListener -> a.c.a.h.b$b:
+    void onImagePageSelected(int,com.mobile.centaur.views.ImageItem,boolean) -> a
+com.pizidea.imagepicker.ui.ImagePreviewFragment$OnImageSingleTapClickListener -> a.c.a.h.b$c:
+    void onImageSingleTap(android.view.MotionEvent) -> a
+com.pizidea.imagepicker.ui.ImagePreviewFragment$SinglePreviewFragment -> a.c.a.h.b$d:
+    com.pizidea.imagepicker.widget.TouchImageView imageView -> a
+    java.lang.String url -> b
+    com.pizidea.imagepicker.ui.ImagePreviewFragment this$0 -> c
+    167:167:void <init>(com.pizidea.imagepicker.ui.ImagePreviewFragment) -> <init>
+    167:167:void <init>(com.pizidea.imagepicker.ui.ImagePreviewFragment,com.pizidea.imagepicker.ui.ImagePreviewFragment$1) -> <init>
+    174:213:void onCreate(android.os.Bundle) -> onCreate
+    217:217:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+com.pizidea.imagepicker.ui.ImagePreviewFragment$SinglePreviewFragment$1 -> a.c.a.h.b$d$a:
+    com.pizidea.imagepicker.ui.ImagePreviewFragment$SinglePreviewFragment this$1 -> a
+    188:188:void <init>(com.pizidea.imagepicker.ui.ImagePreviewFragment$SinglePreviewFragment) -> <init>
+    206:206:boolean onDoubleTap(android.view.MotionEvent) -> onDoubleTap
+    201:201:boolean onDoubleTapEvent(android.view.MotionEvent) -> onDoubleTapEvent
+    191:196:boolean onSingleTapConfirmed(android.view.MotionEvent) -> onSingleTapConfirmed
+com.pizidea.imagepicker.ui.ImagePreviewFragment$TouchImageAdapter -> a.c.a.h.b$e:
+    com.pizidea.imagepicker.ui.ImagePreviewFragment this$0 -> a
+    146:148:void <init>(com.pizidea.imagepicker.ui.ImagePreviewFragment,androidx.fragment.app.FragmentManager) -> <init>
+    152:152:int getCount() -> getCount
+    157:161:androidx.fragment.app.Fragment getItem(int) -> getItem
+com.pizidea.imagepicker.ui.ImagesGridFragment -> a.c.a.h.c:
+    android.widget.GridView mGridView -> b
+    java.lang.String TAG -> m
+    com.pizidea.imagepicker.ImgLoader mImagePresenter -> j
+    android.widget.ListPopupWindow mFolderPopupWindow -> g
+    com.pizidea.imagepicker.ui.ImagesGridFragment$ImageSetAdapter mImageSetAdapter -> h
+    int imageGridSize -> d
+    com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter mAdapter -> c
+    com.pizidea.imagepicker.AndroidImagePicker androidImagePicker -> k
+    android.widget.AdapterView$OnItemClickListener mOnItemClickListener -> l
+    java.util.List mImageSetList -> i
+    android.app.Activity mContext -> a
+    android.widget.Button btnDir -> e
+    android.view.View mFooterView -> f
+    72:72:void <clinit>() -> <clinit>
+    71:71:void <init>() -> <init>
+    71:71:android.widget.ListPopupWindow access$000(com.pizidea.imagepicker.ui.ImagesGridFragment) -> a
+    71:71:void access$100(com.pizidea.imagepicker.ui.ImagesGridFragment,int,int) -> a
+    198:199:void setOnImageItemClickListener(android.widget.AdapterView$OnItemClickListener) -> a
+    203:205:void onImageSelectChange(int,com.mobile.centaur.views.ImageItem,int,int) -> a
+    209:210:void onImageCropComplete(android.graphics.Bitmap,float) -> a
+    375:375:boolean shouldSelectMulti() -> a
+    385:391:void onImagesLoaded(java.util.List) -> a
+    397:446:void createPopupFolderList(int,int) -> a
+    450:453:void backgroundAlpha(float) -> a
+    71:71:com.pizidea.imagepicker.ui.ImagesGridFragment$ImageSetAdapter access$200(com.pizidea.imagepicker.ui.ImagesGridFragment) -> b
+    379:379:boolean shouldShowCamera() -> b
+    71:71:boolean access$300(com.pizidea.imagepicker.ui.ImagesGridFragment) -> c
+    71:71:boolean access$400(com.pizidea.imagepicker.ui.ImagesGridFragment) -> d
+    71:71:android.widget.AdapterView$OnItemClickListener access$500(com.pizidea.imagepicker.ui.ImagesGridFragment) -> e
+    569:592:void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    96:110:void onCreate(android.os.Bundle) -> onCreate
+    115:192:android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> onCreateView
+    558:563:void onDestroy() -> onDestroy
+com.pizidea.imagepicker.ui.ImagesGridFragment$1 -> a.c.a.h.c$a:
+    com.pizidea.imagepicker.ui.ImagesGridFragment this$0 -> c
+    int val$height -> b
+    int val$width -> a
+    168:168:void <init>(com.pizidea.imagepicker.ui.ImagesGridFragment,int,int) -> <init>
+    171:186:void onClick(android.view.View) -> onClick
+com.pizidea.imagepicker.ui.ImagesGridFragment$2 -> a.c.a.h.c$b:
+    com.pizidea.imagepicker.ui.ImagesGridFragment this$0 -> a
+    406:406:void <init>(com.pizidea.imagepicker.ui.ImagesGridFragment) -> <init>
+    410:411:void onDismiss() -> onDismiss
+com.pizidea.imagepicker.ui.ImagesGridFragment$3 -> a.c.a.h.c$c:
+    com.pizidea.imagepicker.ui.ImagesGridFragment this$0 -> a
+    416:416:void <init>(com.pizidea.imagepicker.ui.ImagesGridFragment) -> <init>
+    420:443:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.pizidea.imagepicker.ui.ImagesGridFragment$3$1 -> a.c.a.h.c$c$a:
+    com.pizidea.imagepicker.ui.ImagesGridFragment$3 this$1 -> c
+    android.widget.AdapterView val$tempAdapterView -> a
+    int val$index -> b
+    426:426:void <init>(com.pizidea.imagepicker.ui.ImagesGridFragment$3,android.widget.AdapterView,int) -> <init>
+    429:440:void run() -> run
+com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter -> a.c.a.h.c$d:
+    java.util.List images -> a
+    android.content.Context mContext -> b
+    com.pizidea.imagepicker.ui.ImagesGridFragment this$0 -> c
+    219:222:void <init>(com.pizidea.imagepicker.ui.ImagesGridFragment,android.content.Context,java.util.List) -> <init>
+    245:251:com.mobile.centaur.views.ImageItem getItem(int) -> a
+    366:370:void refreshData(java.util.List) -> a
+    240:240:int getCount() -> getCount
+    215:215:java.lang.Object getItem(int) -> getItem
+    258:258:long getItemId(int) -> getItemId
+    231:234:int getItemViewType(int) -> getItemViewType
+    264:355:android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+    226:226:int getViewTypeCount() -> getViewTypeCount
+com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter$1 -> a.c.a.h.c$d$a:
+    com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter this$1 -> a
+    268:268:void <init>(com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter) -> <init>
+    272:276:void onClick(android.view.View) -> onClick
+com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter$2 -> a.c.a.h.c$d$b:
+    com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter this$1 -> b
+    com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter$ViewHolder val$holder -> a
+    299:299:void <init>(com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter,com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter$ViewHolder) -> <init>
+    302:314:void onClick(android.view.View) -> onClick
+com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter$3 -> a.c.a.h.c$d$c:
+    android.view.View val$imageItemView -> a
+    int val$position -> b
+    com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter this$1 -> c
+    329:329:void <init>(com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter,android.view.View,int) -> <init>
+    332:333:void onClick(android.view.View) -> onClick
+com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter$4 -> a.c.a.h.c$d$d:
+    com.mobile.centaur.views.ImageItem val$item -> b
+    com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter this$1 -> c
+    int val$position -> a
+    336:336:void <init>(com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter,int,com.mobile.centaur.views.ImageItem) -> <init>
+    340:346:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter$ViewHolder -> a.c.a.h.c$d$e:
+    com.pizidea.imagepicker.widget.SuperCheckBox cbSelected -> b
+    android.widget.ImageView ivPic -> a
+    359:359:void <init>(com.pizidea.imagepicker.ui.ImagesGridFragment$ImageGridAdapter) -> <init>
+com.pizidea.imagepicker.ui.ImagesGridFragment$ImageSetAdapter -> a.c.a.h.c$e:
+    android.content.Context mContext -> a
+    android.view.LayoutInflater mInflater -> b
+    java.util.List mImageSets -> c
+    int lastSelected -> d
+    com.pizidea.imagepicker.ui.ImagesGridFragment this$0 -> e
+    462:472:void <init>(com.pizidea.imagepicker.ui.ImagesGridFragment,android.content.Context) -> <init>
+    458:458:android.content.Context access$600(com.pizidea.imagepicker.ui.ImagesGridFragment$ImageSetAdapter) -> a
+    475:481:void refreshData(java.util.List) -> a
+    490:490:com.pizidea.imagepicker.bean.ImageSet getItem(int) -> a
+    528:528:int getSelectIndex() -> a
+    520:525:void setSelectIndex(int) -> b
+    485:485:int getCount() -> getCount
+    458:458:java.lang.Object getItem(int) -> getItem
+    495:495:long getItemId(int) -> getItemId
+    501:516:android.view.View getView(int,android.view.View,android.view.ViewGroup) -> getView
+com.pizidea.imagepicker.ui.ImagesGridFragment$ImageSetAdapter$ViewHolder -> a.c.a.h.c$e$a:
+    android.widget.TextView size -> c
+    android.widget.TextView name -> b
+    android.widget.ImageView cover -> a
+    com.pizidea.imagepicker.ui.ImagesGridFragment$ImageSetAdapter this$1 -> e
+    android.widget.ImageView indicator -> d
+    537:543:void <init>(com.pizidea.imagepicker.ui.ImagesGridFragment$ImageSetAdapter,android.view.View) -> <init>
+    546:549:void bindData(com.pizidea.imagepicker.bean.ImageSet) -> a
+com.pizidea.imagepicker.ui.activity.ImageCropActivity -> com.pizidea.imagepicker.ui.activity.ImageCropActivity:
+    android.widget.TextView btnReChoose -> a
+    android.widget.TextView btnOk -> b
+    com.pizidea.imagepicker.ui.AvatarCropFragment mFragment -> c
+    java.lang.String imagePath -> d
+    37:37:void <init>() -> <init>
+    73:81:void onClick(android.view.View) -> onClick
+    49:68:void onCreate(android.os.Bundle) -> onCreate
+com.pizidea.imagepicker.ui.activity.ImagePreviewActivity -> com.pizidea.imagepicker.ui.activity.ImagePreviewActivity:
+    android.widget.CheckBox mCbSelected -> c
+    android.widget.TextView mTitleCount -> b
+    java.util.List mImageList -> e
+    android.widget.TextView mBtnOk -> d
+    int mShowItemPosition -> f
+    com.pizidea.imagepicker.AndroidImagePicker androidImagePicker -> g
+    com.pizidea.imagepicker.ui.ImagePreviewFragment mFragment -> a
+    41:41:void <clinit>() -> <clinit>
+    40:49:void <init>() -> <init>
+    136:150:void onImageSingleTap(android.view.MotionEvent) -> a
+    154:156:void onImagePageSelected(int,com.mobile.centaur.views.ImageItem,boolean) -> a
+    160:168:void onImageSelectChange(int,com.mobile.centaur.views.ImageItem,int,int) -> a
+    123:131:void onClick(android.view.View) -> onClick
+    54:119:void onCreate(android.os.Bundle) -> onCreate
+    172:175:void onDestroy() -> onDestroy
+com.pizidea.imagepicker.ui.activity.ImagePreviewActivity$1 -> com.pizidea.imagepicker.ui.activity.ImagePreviewActivity$a:
+    com.pizidea.imagepicker.ui.activity.ImagePreviewActivity this$0 -> a
+    75:75:void <init>(com.pizidea.imagepicker.ui.activity.ImagePreviewActivity) -> <init>
+    78:79:void onClick(android.view.View) -> onClick
+com.pizidea.imagepicker.ui.activity.ImagePreviewActivity$2 -> com.pizidea.imagepicker.ui.activity.ImagePreviewActivity$b:
+    com.pizidea.imagepicker.ui.activity.ImagePreviewActivity this$0 -> a
+    82:82:void <init>(com.pizidea.imagepicker.ui.activity.ImagePreviewActivity) -> <init>
+    85:97:void onClick(android.view.View) -> onClick
+com.pizidea.imagepicker.ui.activity.ImagePreviewActivity$3 -> com.pizidea.imagepicker.ui.activity.ImagePreviewActivity$c:
+    com.pizidea.imagepicker.ui.activity.ImagePreviewActivity this$0 -> a
+    101:101:void <init>(com.pizidea.imagepicker.ui.activity.ImagePreviewActivity) -> <init>
+    104:105:void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+com.pizidea.imagepicker.ui.activity.ImagesGridActivity -> com.pizidea.imagepicker.ui.activity.ImagesGridActivity:
+    android.widget.TextView mBtnOk -> a
+    com.pizidea.imagepicker.ui.ImagesGridFragment mFragment -> b
+    com.pizidea.imagepicker.AndroidImagePicker androidImagePicker -> c
+    37:37:void <clinit>() -> <clinit>
+    36:36:void <init>() -> <init>
+    36:36:void access$000(com.pizidea.imagepicker.ui.activity.ImagesGridActivity,int) -> a
+    120:124:void go2Preview(int) -> a
+    142:151:void onImageSelectChange(int,com.mobile.centaur.views.ImageItem,int,int) -> a
+    163:175:void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    130:137:void onClick(android.view.View) -> onClick
+    47:112:void onCreate(android.os.Bundle) -> onCreate
+    155:159:void onDestroy() -> onDestroy
+com.pizidea.imagepicker.ui.activity.ImagesGridActivity$1 -> com.pizidea.imagepicker.ui.activity.ImagesGridActivity$a:
+    com.pizidea.imagepicker.ui.activity.ImagesGridActivity this$0 -> a
+    62:62:void <init>(com.pizidea.imagepicker.ui.activity.ImagesGridActivity) -> <init>
+    65:66:void onClick(android.view.View) -> onClick
+com.pizidea.imagepicker.ui.activity.ImagesGridActivity$2 -> com.pizidea.imagepicker.ui.activity.ImagesGridActivity$b:
+    com.pizidea.imagepicker.ui.activity.ImagesGridActivity this$0 -> b
+    boolean val$isCrop -> a
+    77:77:void <init>(com.pizidea.imagepicker.ui.activity.ImagesGridActivity,boolean) -> <init>
+    81:102:void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+com.pizidea.imagepicker.widget.AvatarRectView -> com.pizidea.imagepicker.widget.AvatarRectView:
+    android.graphics.Rect[] rectArray -> d
+    android.graphics.Bitmap centerBitmap -> f
+    android.graphics.Paint mPaint -> a
+    android.graphics.Rect centerRect -> e
+    int mAvatarSize -> c
+    android.graphics.Rect mRect -> b
+    39:39:void <clinit>() -> <clinit>
+    41:62:void <init>(android.content.Context,int) -> <init>
+    106:106:android.graphics.Rect getCropRect() -> getCropRect
+    66:98:void onDraw(android.graphics.Canvas) -> onDraw
+com.pizidea.imagepicker.widget.SquareLayout -> com.pizidea.imagepicker.widget.SquareLayout:
+    33:34:void <init>(android.content.Context,android.util.AttributeSet,int) -> <init>
+    37:38:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    41:42:void <init>(android.content.Context) -> <init>
+    46:50:void onMeasure(int,int) -> onMeasure
+com.pizidea.imagepicker.widget.SuperCheckBox -> com.pizidea.imagepicker.widget.SuperCheckBox:
+    boolean canChecked -> a
+    34:38:void <init>(android.content.Context,android.util.AttributeSet,int) -> <init>
+    34:42:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    34:46:void <init>(android.content.Context) -> <init>
+    50:50:java.lang.CharSequence getAccessibilityClassName() -> getAccessibilityClassName
+    72:79:boolean performClick() -> performClick
+    58:59:void setCanChecked(boolean) -> setCanChecked
+    64:67:void toggle() -> toggle
+com.pizidea.imagepicker.widget.SuperImageView -> com.pizidea.imagepicker.widget.SuperImageView:
+    android.graphics.Matrix savedMatrix -> h
+    float viewH -> f
+    float viewW -> e
+    android.graphics.Matrix matrix -> g
+    int mode -> i
+    float rotatedImageH -> d
+    android.graphics.PointF pA -> j
+    float rotatedImageW -> c
+    float imageH -> b
+    float imageW -> a
+    android.graphics.PointF lastClickPos -> m
+    double rotation -> o
+    android.graphics.PointF mid -> l
+    android.graphics.PointF pB -> k
+    float MAX_SCALE -> s
+    long lastClickTime -> n
+    float dist -> p
+    int leftMargins -> r
+    int topBottomMargins -> q
+    38:38:void <clinit>() -> <clinit>
+    45:68:void <init>(android.content.Context) -> <init>
+    45:73:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    45:78:void <init>(android.content.Context,android.util.AttributeSet,int) -> <init>
+    208:220:void centerBitmap() -> a
+    355:357:float spacing(float,float,float,float) -> a
+    361:376:void doubleClick(float,float) -> a
+    143:161:void fixScale() -> b
+    178:202:void fixTranslation() -> c
+    81:82:void init() -> d
+    129:140:void initImage() -> e
+    164:174:float maxPostScale() -> f
+    100:107:void setImageWidthHeight() -> g
+    110:110:double getImageRotation() -> getImageRotation
+    385:392:android.graphics.RectF getMatrixRect() -> getMatrixRect
+    114:126:void onSizeChanged(int,int,int,int) -> onSizeChanged
+    224:348:boolean onTouchEvent(android.view.MotionEvent) -> onTouchEvent
+    85:87:void setImageBitmap(android.graphics.Bitmap) -> setImageBitmap
+    90:92:void setImageDrawable(android.graphics.drawable.Drawable) -> setImageDrawable
+    95:97:void setImageResource(int) -> setImageResource
+com.pizidea.imagepicker.widget.TouchImageView -> com.pizidea.imagepicker.widget.TouchImageView:
+    boolean imageRenderedAtLeastOnce -> m
+    float superMinScale -> g
+    float minScale -> e
+    float normalizedScale -> a
+    android.view.GestureDetector$OnDoubleTapListener doubleTapListener -> z
+    com.pizidea.imagepicker.widget.TouchImageView$OnTouchImageViewListener touchImageViewListener -> B
+    float prevMatchViewHeight -> w
+    float matchViewHeight -> u
+    android.graphics.Matrix prevMatrix -> c
+    android.widget.ImageView$ScaleType mScaleType -> l
+    android.view.View$OnTouchListener userTouchListener -> A
+    com.pizidea.imagepicker.widget.TouchImageView$Fling fling -> k
+    int prevViewHeight -> s
+    int viewHeight -> q
+    boolean onDrawReady -> n
+    float superMaxScale -> h
+    float[] m -> i
+    com.pizidea.imagepicker.widget.TouchImageView$ZoomVariables delayedZoomVariables -> o
+    android.view.GestureDetector mGestureDetector -> y
+    float maxScale -> f
+    com.pizidea.imagepicker.widget.TouchImageView$State state -> d
+    android.content.Context context -> j
+    float prevMatchViewWidth -> v
+    android.view.ScaleGestureDetector mScaleDetector -> x
+    float matchViewWidth -> t
+    android.graphics.Matrix matrix -> b
+    int prevViewWidth -> r
+    int viewWidth -> p
+    118:125:void <init>(android.content.Context) -> <init>
+    118:130:void <init>(android.content.Context,android.util.AttributeSet) -> <init>
+    118:135:void <init>(android.content.Context,android.util.AttributeSet,int) -> <init>
+    60:60:android.view.ScaleGestureDetector access$1000(com.pizidea.imagepicker.widget.TouchImageView) -> a
+    60:60:void access$1200(com.pizidea.imagepicker.widget.TouchImageView,com.pizidea.imagepicker.widget.TouchImageView$State) -> a
+    60:60:float access$1500(com.pizidea.imagepicker.widget.TouchImageView,float,float,float) -> a
+    60:60:void access$2200(com.pizidea.imagepicker.widget.TouchImageView,double,float,float,boolean) -> a
+    60:60:android.graphics.PointF access$2300(com.pizidea.imagepicker.widget.TouchImageView,float,float,boolean) -> a
+    60:60:android.graphics.PointF access$2400(com.pizidea.imagepicker.widget.TouchImageView,float,float) -> a
+    60:60:com.pizidea.imagepicker.widget.TouchImageView$Fling access$402(com.pizidea.imagepicker.widget.TouchImageView,com.pizidea.imagepicker.widget.TouchImageView$Fling) -> a
+    60:60:void access$500(com.pizidea.imagepicker.widget.TouchImageView,java.lang.Runnable) -> a
+    138:158:void sharedConstructing(android.content.Context) -> a
+    414:430:void setZoom(float,float,float,android.widget.ImageView$ScaleType) -> a
+    533:536:float getFixDragTrans(float,float,float) -> a
+    582:686:void fitImageToView() -> a
+    698:715:int setViewSize(int,int,int) -> a
+    731:752:void translateMatrixAfterRotate(int,float,float,float,int,int,int) -> a
+    963:984:void scaleImage(double,float,float,boolean) -> a
+    1101:1114:android.graphics.PointF transformCoordTouchToBitmap(float,float,boolean) -> a
+    1126:1133:android.graphics.PointF transformCoordBitmapToTouch(float,float) -> a
+    1286:1292:void compatPostOnAnimation(java.lang.Runnable) -> a
+    60:60:android.view.GestureDetector access$1100(com.pizidea.imagepicker.widget.TouchImageView) -> b
+    501:511:void fixScaleTrans() -> b
+    516:529:float getFixTrans(float,float,float) -> b
+    60:60:int access$1300(com.pizidea.imagepicker.widget.TouchImageView) -> c
+    394:395:void setZoom(float,float,float) -> c
+    481:491:void fixTrans() -> c
+    764:777:boolean canScrollHorizontally(int) -> canScrollHorizontally
+    60:60:float access$1400(com.pizidea.imagepicker.widget.TouchImageView) -> d
+    232:232:boolean isZoomed() -> d
+    60:60:int access$1600(com.pizidea.imagepicker.widget.TouchImageView) -> e
+    370:372:void resetZoom() -> e
+    60:60:float access$1700(com.pizidea.imagepicker.widget.TouchImageView) -> f
+    257:265:void savePreviousImageValues() -> f
+    60:60:android.graphics.Matrix access$1800(com.pizidea.imagepicker.widget.TouchImageView) -> g
+    353:353:float getCurrentZoom() -> getCurrentZoom
+    544:544:float getImageHeight() -> getImageHeight
+    540:540:float getImageWidth() -> getImageWidth
+    324:324:float getMaxZoom() -> getMaxZoom
+    343:343:float getMinZoom() -> getMinZoom
+    223:223:android.widget.ImageView$ScaleType getScaleType() -> getScaleType
+    452:462:android.graphics.PointF getScrollPosition() -> getScrollPosition
+    241:249:android.graphics.RectF getZoomedRect() -> getZoomedRect
+    60:60:void access$1900(com.pizidea.imagepicker.widget.TouchImageView) -> h
+    60:60:android.view.View$OnTouchListener access$2000(com.pizidea.imagepicker.widget.TouchImageView) -> i
+    60:60:com.pizidea.imagepicker.widget.TouchImageView$OnTouchImageViewListener access$2100(com.pizidea.imagepicker.widget.TouchImageView) -> j
+    60:60:void access$2500(com.pizidea.imagepicker.widget.TouchImageView) -> k
+    60:60:android.content.Context access$2600(com.pizidea.imagepicker.widget.TouchImageView) -> l
+    60:60:float[] access$2700(com.pizidea.imagepicker.widget.TouchImageView) -> m
+    60:60:android.view.GestureDetector$OnDoubleTapListener access$300(com.pizidea.imagepicker.widget.TouchImageView) -> n
+    60:60:com.pizidea.imagepicker.widget.TouchImageView$Fling access$400(com.pizidea.imagepicker.widget.TouchImageView) -> o
+    314:316:void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    303:310:void onDraw(android.graphics.Canvas) -> onDraw
+    549:574:void onMeasure(int,int) -> onMeasure
+    284:299:void onRestoreInstanceState(android.os.Parcelable) -> onRestoreInstanceState
+    269:279:android.os.Parcelable onSaveInstanceState() -> onSaveInstanceState
+    60:60:com.pizidea.imagepicker.widget.TouchImageView$State access$600(com.pizidea.imagepicker.widget.TouchImageView) -> p
+    60:60:float access$700(com.pizidea.imagepicker.widget.TouchImageView) -> q
+    60:60:float access$800(com.pizidea.imagepicker.widget.TouchImageView) -> r
+    60:60:float access$900(com.pizidea.imagepicker.widget.TouchImageView) -> s
+    182:185:void setImageBitmap(android.graphics.Bitmap) -> setImageBitmap
+    189:192:void setImageDrawable(android.graphics.drawable.Drawable) -> setImageDrawable
+    175:178:void setImageResource(int) -> setImageResource
+    196:199:void setImageURI(android.net.Uri) -> setImageURI
+    333:335:void setMaxZoom(float) -> setMaxZoom
+    362:364:void setMinZoom(float) -> setMinZoom
+    170:171:void setOnDoubleTapListener(android.view.GestureDetector$OnDoubleTapListener) -> setOnDoubleTapListener
+    166:167:void setOnTouchImageViewListener(com.pizidea.imagepicker.widget.TouchImageView$OnTouchImageViewListener) -> setOnTouchImageViewListener
+    162:163:void setOnTouchListener(android.view.View$OnTouchListener) -> setOnTouchListener
+    203:219:void setScaleType(android.widget.ImageView$ScaleType) -> setScaleType
+    755:756:void setState(com.pizidea.imagepicker.widget.TouchImageView$State) -> setState
+    380:381:void setZoom(float) -> setZoom
+    439:441:void setZoom(com.pizidea.imagepicker.widget.TouchImageView) -> setZoom
+com.pizidea.imagepicker.widget.TouchImageView$1 -> com.pizidea.imagepicker.widget.TouchImageView$a:
+    int[] $SwitchMap$android$widget$ImageView$ScaleType -> a
+    599:599:void <clinit>() -> <clinit>
+com.pizidea.imagepicker.widget.TouchImageView$CompatScroller -> com.pizidea.imagepicker.widget.TouchImageView$b:
+    android.widget.Scroller scroller -> a
+    android.widget.OverScroller overScroller -> b
+    boolean isPreGingerbread -> c
+    1223:1232:void <init>(com.pizidea.imagepicker.widget.TouchImageView,android.content.Context) -> <init>
+    1235:1240:void fling(int,int,int,int,int,int,int,int) -> a
+    1243:1248:void forceFinished(boolean) -> a
+    1259:1263:boolean computeScrollOffset() -> a
+    1268:1271:int getCurrX() -> b
+    1276:1279:int getCurrY() -> c
+    1251:1254:boolean isFinished() -> d
+com.pizidea.imagepicker.widget.TouchImageView$DoubleTapZoom -> com.pizidea.imagepicker.widget.TouchImageView$c:
+    float bitmapY -> e
+    float bitmapX -> d
+    long startTime -> a
+    float targetZoom -> c
+    boolean stretchImageToSuper -> f
+    android.view.animation.AccelerateDecelerateInterpolator interpolator -> g
+    android.graphics.PointF endTouch -> i
+    float startZoom -> b
+    android.graphics.PointF startTouch -> h
+    com.pizidea.imagepicker.widget.TouchImageView this$0 -> j
+    999:1018:void <init>(com.pizidea.imagepicker.widget.TouchImageView,float,float,float,boolean) -> <init>
+    1071:1074:float interpolate() -> a
+    1085:1086:double calculateDeltaScale(float) -> a
+    1059:1063:void translateImageToCenterTouchPosition(float) -> b
+    1022:1049:void run() -> run
+com.pizidea.imagepicker.widget.TouchImageView$Fling -> com.pizidea.imagepicker.widget.TouchImageView$d:
+    com.pizidea.imagepicker.widget.TouchImageView$CompatScroller scroller -> a
+    int currX -> b
+    int currY -> c
+    com.pizidea.imagepicker.widget.TouchImageView this$0 -> d
+    1148:1177:void <init>(com.pizidea.imagepicker.widget.TouchImageView,int,int) -> <init>
+    1180:1184:void cancelFling() -> a
+    1193:1214:void run() -> run
+com.pizidea.imagepicker.widget.TouchImageView$GestureListener -> com.pizidea.imagepicker.widget.TouchImageView$e:
+    com.pizidea.imagepicker.widget.TouchImageView this$0 -> a
+    786:786:void <init>(com.pizidea.imagepicker.widget.TouchImageView) -> <init>
+    786:786:void <init>(com.pizidea.imagepicker.widget.TouchImageView,com.pizidea.imagepicker.widget.TouchImageView$1) -> <init>
+    817:827:boolean onDoubleTap(android.view.MotionEvent) -> onDoubleTap
+    832:835:boolean onDoubleTapEvent(android.view.MotionEvent) -> onDoubleTapEvent
+    803:812:boolean onFling(android.view.MotionEvent,android.view.MotionEvent,float,float) -> onFling
+    798:799:void onLongPress(android.view.MotionEvent) -> onLongPress
+    790:793:boolean onSingleTapConfirmed(android.view.MotionEvent) -> onSingleTapConfirmed
+com.pizidea.imagepicker.widget.TouchImageView$OnTouchImageViewListener -> com.pizidea.imagepicker.widget.TouchImageView$f:
+    void onMove() -> a
+com.pizidea.imagepicker.widget.TouchImageView$PrivateOnTouchListener -> com.pizidea.imagepicker.widget.TouchImageView$g:
+    android.graphics.PointF last -> a
+    com.pizidea.imagepicker.widget.TouchImageView this$0 -> b
+    849:854:void <init>(com.pizidea.imagepicker.widget.TouchImageView) -> <init>
+    849:849:void <init>(com.pizidea.imagepicker.widget.TouchImageView,com.pizidea.imagepicker.widget.TouchImageView$1) -> <init>
+    858:909:boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
+com.pizidea.imagepicker.widget.TouchImageView$ScaleListener -> com.pizidea.imagepicker.widget.TouchImageView$h:
+    com.pizidea.imagepicker.widget.TouchImageView this$0 -> a
+    918:918:void <init>(com.pizidea.imagepicker.widget.TouchImageView) -> <init>
+    918:918:void <init>(com.pizidea.imagepicker.widget.TouchImageView,com.pizidea.imagepicker.widget.TouchImageView$1) -> <init>
+    927:935:boolean onScale(android.view.ScaleGestureDetector) -> onScale
+    921:922:boolean onScaleBegin(android.view.ScaleGestureDetector) -> onScaleBegin
+    940:957:void onScaleEnd(android.view.ScaleGestureDetector) -> onScaleEnd
+com.pizidea.imagepicker.widget.TouchImageView$State -> com.pizidea.imagepicker.widget.TouchImageView$i:
+    com.pizidea.imagepicker.widget.TouchImageView$State[] $VALUES -> f
+    com.pizidea.imagepicker.widget.TouchImageView$State NONE -> a
+    com.pizidea.imagepicker.widget.TouchImageView$State DRAG -> b
+    com.pizidea.imagepicker.widget.TouchImageView$State ZOOM -> c
+    com.pizidea.imagepicker.widget.TouchImageView$State FLING -> d
+    com.pizidea.imagepicker.widget.TouchImageView$State ANIMATE_ZOOM -> e
+    85:85:void <clinit>() -> <clinit>
+    85:85:void <init>(java.lang.String,int) -> <init>
+    85:85:com.pizidea.imagepicker.widget.TouchImageView$State valueOf(java.lang.String) -> valueOf
+    85:85:com.pizidea.imagepicker.widget.TouchImageView$State[] values() -> values
+com.pizidea.imagepicker.widget.TouchImageView$ZoomVariables -> com.pizidea.imagepicker.widget.TouchImageView$j:
+    android.widget.ImageView$ScaleType scaleType -> d
+    float focusY -> c
+    float focusX -> b
+    float scale -> a
+    1300:1305:void <init>(com.pizidea.imagepicker.widget.TouchImageView,float,float,float,android.widget.ImageView$ScaleType) -> <init>

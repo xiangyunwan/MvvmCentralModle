@@ -1,0 +1,4 @@
+include ':MvvmCentaur'
+//include ':HtmlTextView'
+include ':app'
+rootProject.name = "TsetCentral"

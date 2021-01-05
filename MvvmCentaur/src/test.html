@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport"
+          content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <style type='text/css'>
+            html { font-family:Helvetica; color:#222; }
+            h1 { color:steelblue; font-size:24px; margin-top:24px; }
+            button { margin:0 3px 10px; font-size:12px; }
+            .logLine { border-bottom:1px solid #ccc; padding:4px 2px; font-family:courier; font-size:11px; }
+
+    </style>
+</head>
+<body>
+<h1>WebViewJavascriptBridge Demo</h1>
+<script>
+        window.onerror = function(err) {
+            log('window.onerror: ' + err)
+        }
+    function setupWebViewJavascriptBridge(callback) {
+        //第一次调用这个方法的时候，为false
+        if (window.WebViewJavascriptBridge) {
+            var result = callback(WebViewJavascriptBridge);
+            return result;
+        }
+        //第一次调用的时候，也是false
+        if (window.WVJBCallbacks) {
+            var result = window.WVJBCallbacks.push(callback);
+            return result;
+        }
+        //把callback对象赋值给对象。
+        window.WVJBCallbacks = [callback];
+        //这段代码的意思就是执行加载WebViewJavascriptBridge_JS.js中代码的作用
+        var WVJBIframe = document.createElement('iframe');
+        WVJBIframe.style.display = 'none';
+        WVJBIframe.src = 'https://__bridge_loaded__';
+        document.documentElement.appendChild(WVJBIframe);
+        setTimeout(function() {
+                   document.documentElement.removeChild(WVJBIframe)
+                   }, 0);
+    }
+    //setupWebViewJavascriptBridge执行的时候传入的参数，这是一个方法。
+    function callback(bridge) {
+        var uniqueId = 1
+        //把操作记录写入webview中
+        function log(message, data) {
+            var log = document.getElementById('log')
+            var el = document.createElement('div')
+            el.className = 'logLine'
+            el.innerHTML = uniqueId++ + '. ' + message + ':<br/>' + JSON.stringify(data)
+            
+            if (log.children.length) {
+                log.insertBefore(el, log.children[0])
+            }else {
+                log.appendChild(el)
+            }
+        }
+        //把WEB中要注册的方法注册到bridge里面
+        bridge.registerHandler('OC调用JS提供的方法', function(data, responseCallback) {
+                               log('OC调用JS方法成功', data)
+                               var responseData = { 'JS给OC调用的回调':'回调值!' }
+                               log('OC调用JS的返回值', responseData)
+                               responseCallback(responseData)
+                               })
+                               //获取web中的button，然后添加点击事件。
+                               document.body.appendChild(document.createElement('br'))
+                               document.getElementById('buttons').onclick = function(e) {
+                                   e.preventDefault()
+                                   var params =  {'JS调用OC参数': '参数值'};
+                                   log('JS马上调用OC方法',params)
+                                   bridge.callHandler('test',params, function(response) {
+                                                      log('JS调用OC的返回值', response)
+                                                      })
+                               }
+                               
+                               document.getElementById('buttonsA').onclick = function(e) {
+                                   e.preventDefault()
+                                   var params =  ["1","2"];
+                                   log('JS马上调用OC方法',params)
+                                   bridge.callHandler('getSystemInfo',params, function(response) {
+                                                      log('getSystemInfo', response)
+                                                      })
+                               }
+                               document.getElementById('buttonsB').onclick = function(e) {
+                                   e.preventDefault()
+                                   var params =  {'JS调用OC参数': '参数值'};
+                                   log('JS马上调用OC方法',params)
+                                   bridge.callHandler('getCurrentLocation',params, function(response) {
+                                                      log('getCurrentLocation', response)
+                                                      })
+                               }
+                               document.getElementById('buttonsC').onclick = function(e) {
+                                   e.preventDefault()
+                                   var params =  {'JS调用OC参数': '参数值'};
+                                   log('photo',params)
+                                   bridge.callHandler('photo',params, function(response) {
+                                                      log('photo', response)
+                                                      })
+                               }
+                               document.getElementById('buttonsD').onclick = function(e) {
+                                   e.preventDefault()
+                                   var params =  {'type': '1'};
+                                   log('xappExpBtnActionPressed',params)
+                                   bridge.callHandler('xappExpBtnActionPressed',params, function(response) {
+                                                      log('xappExpBtnActionPressed', response)
+                                                      })
+                               }
+                               document.getElementById('buttonsE').onclick = function(e) {
+                                   e.preventDefault()
+                                   var params =  {'code': '200'};
+                                   log('xappPersonMarksHandler',params)
+                                   bridge.callHandler('xappPersonMarksHandler',params, function(response) {
+                                                      log('xappPersonMarksHandler', response)
+                                                      })
+                               }
+                               document.getElementById('buttonsF').onclick = function(e) {
+                                   e.preventDefault()
+                                   var params =  {'code': '200'};
+                                   log('xappSendNetParam',params)
+                                   bridge.callHandler('xappSendNetParam',params, function(response) {
+                                                      log('xappSendNetParam', response)
+                                                      })
+                               }
+                               document.getElementById('buttonsG').onclick = function(e) {
+                                   e.preventDefault()
+                                   var params =  {'code': '200'};
+                                   log('xappScanQRCode',params)
+                                   bridge.callHandler('xappScanQRCode',params, function(response) {
+                                                      log('xappScanQRCode', response)
+                                                      })
+                               }
+                               document.getElementById('buttonsH').onclick = function(e) {
+                                   e.preventDefault()
+                                   var params =  {'code': '200'};
+                                   log('pushWindow',params)
+                                   bridge.callHandler('pushWindow',params, function(response) {
+                                                      log('pushWindow', response)
+                                                      })
+                               }
+                               document.getElementById('buttonsI').onclick = function(e) {
+                                   e.preventDefault()
+                                   var params =  {'title': 'xxx'};
+                                   log('title',params)
+                                   bridge.callHandler('setTitle',params, function(response) {
+                                                      log('setTitle', response)
+                                                      })
+                               }
+                               document.getElementById('buttonsJ').onclick = function(e) {
+                                   e.preventDefault()
+                                   var params =  {'code': '200'};
+                                   log('addNotifyListener',params)
+                                   bridge.callHandler('addNotifyListener',params, function(response) {
+                                                      log('addNotifyListener', response)
+                                                      })
+                               }
+                               document.getElementById('buttonsK').onclick = function(e) {
+                                   e.preventDefault()
+                                   var params =  {'code': '200'};
+                                   log('postNotification',params)
+                                   bridge.callHandler('postNotification',params, function(response) {
+                                                      log('postNotification', response)
+                                                      })
+                               }
+                               document.getElementById('buttonsL').onclick = function(e) {
+                                   e.preventDefault()
+                                   var params =  {'code': '200'};
+                                   log('removeNotifyListener',params)
+                                   bridge.callHandler('removeNotifyListener',params, function(response) {
+                                                      log('removeNotifyListener', response)
+                                                      })
+                               }
+
+                               
+    };
+    //驱动所有hander的初始化
+    setupWebViewJavascriptBridge(callback);
+
+</script>
+<input type='button' id='buttons' class='button' value='test'></input>
+
+<input type='button' id='buttonsA' class='button' value='getSystemInfo'></input>
+<input type='button' id='buttonsB' class='button' value='location'></input>
+<input type='button' id='buttonsC' class='button' value='photo'></input>
+<input type='button' id='buttonsD' class='button' value='xappExpBtnActionPressed'></input>
+<input type='button' id='buttonsE' class='button' value='xappPersonMarksHandler'></input>
+<input type='button' id='buttonsF' class='button' value='xappSendNetParam'></input>
+<input type='button' id='buttonsG' class='button' value='ScanQRCode'></input>
+<input type='button' id='buttonsH' class='button' value='pushWindow'></input>
+<input type='button' id='buttonsI' class='button' value='setTitle'></input>
+<input type='button' id='buttonsJ' class='button' value='addNotifyListener'></input>
+<input type='button' id='buttonsK' class='button' value='postNotification'></input>
+<input type='button' id='buttonsL' class='button' value='removeNotifyListener'></input>
+
+<div id='log'></div>
+</body>
+</html>

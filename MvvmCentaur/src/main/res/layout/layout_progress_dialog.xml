@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="95dp"
+    android:layout_height="95dp"
+    android:background="@color/transparent">
+
+    <ImageView
+        android:id="@+id/tv_dialog_progress"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginLeft="28dp"
+        android:background="@drawable/bg_progress" />
+
+</LinearLayout>

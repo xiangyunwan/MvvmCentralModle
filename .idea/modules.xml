@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TsetCentral.iml" filepath="$PROJECT_DIR$/.idea/modules/TsetCentral.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MvvmCentaur/TsetCentral.MvvmCentaur.iml" filepath="$PROJECT_DIR$/.idea/modules/MvvmCentaur/TsetCentral.MvvmCentaur.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TsetCentral.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TsetCentral.app.iml" />
+    </modules>
+  </component>
+</project>

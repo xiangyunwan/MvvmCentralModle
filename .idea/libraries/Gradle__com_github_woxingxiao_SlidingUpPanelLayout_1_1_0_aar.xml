@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.woxingxiao:SlidingUpPanelLayout:1.1.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9be32929fe982c3ffc74a155cd739cbf/jetified-SlidingUpPanelLayout-1.1.0/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9be32929fe982c3ffc74a155cd739cbf/jetified-SlidingUpPanelLayout-1.1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9be32929fe982c3ffc74a155cd739cbf/jetified-SlidingUpPanelLayout-1.1.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9be32929fe982c3ffc74a155cd739cbf/jetified-SlidingUpPanelLayout-1.1.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.woxingxiao/SlidingUpPanelLayout/1.1.0/ffe48b9d141d897dd00e85955e01fc27ed909da8/SlidingUpPanelLayout-1.1.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.woxingxiao/SlidingUpPanelLayout/1.1.0/596d92bd54d30fb5aeac805e64c44a73f8e6b4e9/SlidingUpPanelLayout-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
