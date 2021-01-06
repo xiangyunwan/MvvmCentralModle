@@ -1,5 +1,6 @@
-package com.five.ciec.util;
+package com.mobile.centaur.views;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.Gravity;
@@ -8,13 +9,28 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.five.ciec.R;
+import com.app.mobile.centaur.R;
+import com.mobile.centaur.base.BaseApplication;
 
 
 public class ToastUtils {
 
     private static Toast toast = null;
 
+    /**
+     * 直接调用 默认样式的toast
+     * @param str
+     */
+    @SuppressLint("ShowToast")
+    public static void setToast(String str) {
+
+        if (toast == null) {
+            toast = Toast.makeText(BaseApplication.getContext(), str, Toast.LENGTH_SHORT);
+        } else {
+            toast.setText(str);
+        }
+        toast.show();
+    }
     /**
      * 短时间显示Toast
      * @param context
