@@ -29,4 +29,6 @@
     <item type="id" name="search_book_contents_succeeded" />
     <item type="id" name="statusbarutil_fake_status_bar_view" />
     <item type="id" name="statusbarutil_translucent_view" />
+
+    <item name="update_notification_id" type="id"></item>
 </resources>

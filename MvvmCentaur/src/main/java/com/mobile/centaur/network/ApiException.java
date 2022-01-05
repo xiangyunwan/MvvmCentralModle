@@ -13,10 +13,6 @@ public class ApiException extends RuntimeException {
     public ApiException(int errCode, String msg) {
         super(msg);
         this.errCode = errCode;
-        if (errCode == 15) {
-//            EventBus.getDefault().post(new ExceptionEventBean(errCode));
-//            EventBus.getDefault().post(new ExceptionLogoutEventBean(errCode));
-        }
     }
 
     public ApiException(BaseResponse baseResponse) {

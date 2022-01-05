@@ -15,7 +15,7 @@ public class BaseApplication extends Application {
         MultiDex.install(this);
     }
 
-    public static Context getContext() {
+    public static Context getApplicatonContext() {
         return mContext;
     }
 }

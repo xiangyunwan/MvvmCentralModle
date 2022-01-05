@@ -12,8 +12,6 @@ public class BaseResponse<T> {
     private String message; // message 可用来返回接口的说明
     private String code; // 返回的code
     private String need_update;
-    private String cur_time;
-    private String result; // 返回的result
     private T data; // 具体的数据结果
 
     public String getMsg() {

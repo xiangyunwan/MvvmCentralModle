@@ -25,7 +25,7 @@ public class ToastUtils {
     public static void setToast(String str) {
 
         if (toast == null) {
-            toast = Toast.makeText(BaseApplication.getContext(), str, Toast.LENGTH_SHORT);
+            toast = Toast.makeText(BaseApplication.getApplicatonContext(), str, Toast.LENGTH_SHORT);
         } else {
             toast.setText(str);
         }

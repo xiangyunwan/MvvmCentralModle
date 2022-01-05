@@ -74,7 +74,6 @@ public class RxUtils {
         return new FlowableTransformer<T, T>() {
             @Override
             public Flowable<T> apply(Flowable<T> flowable) {
-//                        return flowable.subscribeOn(Schedulers.newThread())//每次都是新的线程
                 return flowable.subscribeOn(Schedulers.io())//现场池复用，异步执行阻塞io
                         .observeOn(AndroidSchedulers.mainThread());
             }
