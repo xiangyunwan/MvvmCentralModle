@@ -9,7 +9,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.example.tsetcentral"
+        applicationId "com.example.testcentral"
         minSdkVersion min_SdkVersion
         targetSdkVersion target_SdkVersion
         versionCode version_Code

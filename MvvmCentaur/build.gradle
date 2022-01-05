@@ -127,6 +127,9 @@ dependencies {
     api 'com.shizhefei:ViewPagerIndicator:1.1.9'
 
     api 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
+
+    api 'com.tencent:mmkv-static:1.2.10'
+    api 'com.getkeepsafe.relinker:relinker:1.4.3'
     //一个Android富文本类库，支持图文混排，支持编辑和预览，支持插入和删除图片。
 //    api 'com.github.sendtion:XRichText:1.9.4'
 
@@ -144,10 +147,6 @@ dependencies {
 //    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.5'
 
 
-
-
     kapt "com.android.databinding:compiler:3.1.3"
-
-
 }
 

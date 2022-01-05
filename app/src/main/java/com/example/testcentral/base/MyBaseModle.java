@@ -1,6 +1,7 @@
 package com.example.testcentral.base;
 
 
+import com.example.testcentral.bean.MyConstants;
 import com.mobile.centaur.base.BaseModel;
 import com.mobile.centaur.network.NetWorkManager;
 

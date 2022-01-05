@@ -67,7 +67,7 @@ public class NetWorkManager {
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 
         //设置 请求的缓存的大小跟位置
-        File cacheFile = new File(BaseApplication.getContext().getCacheDir(), "cache");
+        File cacheFile = new File(BaseApplication.getApplicatonContext().getCacheDir(), "cache");
         Cache cache = new Cache(cacheFile, 1024 * 1024 * 100); //50Mb 缓存的大小
         // 初始化okhttp
         OkHttpClient client = new OkHttpClient.Builder()
@@ -139,15 +139,15 @@ public class NetWorkManager {
             @Override
             public Response intercept(Chain chain) throws IOException {
                 Request request = chain.request();
-                if (!NetworkUtil.isNetworkAvailable(BaseApplication.getContext())) {
+                if (!NetworkUtil.isNetworkAvailable(BaseApplication.getApplicatonContext())) {
 
                     try {
                         Looper.prepare();
-                        Toast.makeText(BaseApplication.getContext(), "网络连接出了问题，请检查您的网络连接", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(BaseApplication.getApplicatonContext(), "网络连接出了问题，请检查您的网络连接", Toast.LENGTH_SHORT).show();
                         Looper.loop();
                     } catch (Exception e) {
                         Looper.prepare();
-                        Toast.makeText(BaseApplication.getContext(), "网络连接出了问题，请检查您的网络连接", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(BaseApplication.getApplicatonContext(), "网络连接出了问题，请检查您的网络连接", Toast.LENGTH_SHORT).show();
                         Looper.loop();
                     }
                     request = request.newBuilder()
@@ -155,7 +155,7 @@ public class NetWorkManager {
                             .build();
                 }
                 Response response = chain.proceed(request);
-                if (NetworkUtil.isNetworkAvailable(BaseApplication.getContext())) {
+                if (NetworkUtil.isNetworkAvailable(BaseApplication.getApplicatonContext())) {
                     int maxAge = 0;
                     // 有网络时 设置缓存超时时间0个小时 ,意思就是不读取缓存数据,只对get有用,post没有缓冲
                     response.newBuilder()
