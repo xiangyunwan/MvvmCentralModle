@@ -19,7 +19,6 @@ public abstract class BaseBlankActivity extends AppCompatActivity {
     protected View view;
     private ImmersionBar mImmersionBar;
     protected Activity activity;
-    protected ViewDataBinding binding;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -40,20 +39,6 @@ public abstract class BaseBlankActivity extends AppCompatActivity {
         mImmersionBar.init();   //所有子类都将继承这些相同的属性
 
     }
-
-    /**
-     * 获取当前Activity的DataBinding对象
-     *
-     * @param <VT>
-     * @return
-     */
-    protected <VT extends ViewDataBinding> VT creatDataBiding() {
-        VT view = (VT) DataBindingUtil.setContentView(this, getLayoutId());
-        if (view == null)
-            throw new NullPointerException("This resource id is invalid.");
-        return view;
-    }
-
 
     protected abstract int getLayoutId();
 

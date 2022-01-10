@@ -1,4 +1,4 @@
-package com.mobile.centaur.apis
+package com.example.testcentral.base
 
 /**
  * author:zzz
@@ -7,8 +7,6 @@ package com.mobile.centaur.apis
  */
 interface MyConstants {
     companion object {
-        const val BASE_URL = "https://www.baidu.com/"
-        const val THIRDLOGIN_URL = "v1/user.thirdLogin"
         const val SP_NAME = "sp_name"
     }
 }

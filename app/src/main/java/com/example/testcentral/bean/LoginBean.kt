@@ -6,5 +6,4 @@ package com.example.testcentral.bean
  * Time: 6:14 PM
  * Description:
  */
-data class LoginBean(var name:String?,var password:String?,var message:String?) {
-}
+data class LoginBean(var name:String?,var password:String?,var message:String?)

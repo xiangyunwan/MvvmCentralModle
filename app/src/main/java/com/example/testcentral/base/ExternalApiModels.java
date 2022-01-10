@@ -1,45 +1,41 @@
-package com.example.testcentral.base
+package com.example.testcentral.base;
 
-import com.mobile.centaur.base.BaseModel
-import com.mobile.centaur.network.NetWorkManager
+
+import com.app.mobile.centaur.BuildConfig;
+import com.mobile.centaur.apis.Hosts;
+import com.mobile.centaur.base.BaseModel;
+import com.mobile.centaur.network.NetWorkManager;
 
 /**
  * 网络切换
  */
-open class ExternalApiModels : BaseModel() {
-    companion object {
-        @Volatile
-        protected var apiService: DefaultApiService? = null
-        private var mAiliyunApiService: AiliyunApiService? = null
+public class ExternalApiModels extends BaseModel {
 
-        /**
-         * @return retrofit的底层利用反射的方式, 获取所有的api接口的类
-         */
-        val defaultApiService: DefaultApiService?
-            get() {
-                if (apiService == null) {
-                    synchronized(DefaultApiService::class.java) {
-                        if (apiService == null) {
-                            apiService = NetWorkManager.getRetrofit().create(
-                                DefaultApiService::class.java
-                            )
-                        }
-                    }
+    protected volatile static DefaultApiService apiService;
+    private static AiliyunApiService mAiliyunApiService;
+    /**
+     * @return retrofit的底层利用反射的方式, 获取所有的api接口的类
+     */
+    public static DefaultApiService getDefaultApiService(){
+        if (apiService == null) {
+            synchronized (DefaultApiService.class) {
+                if (apiService==null){
+                    apiService = NetWorkManager.getInstance(Hosts.get(BuildConfig.ENV).MAIN_USER).getRetrofit().create(DefaultApiService.class);
                 }
-                return apiService
             }
-        val bjMainUserApi: AiliyunApiService?
-            get() {
+        }
+        return apiService;
+    }
+
+
+    public static AiliyunApiService getBjMainUserApi() {
+        if (mAiliyunApiService == null) {
+            synchronized (AiliyunApiService.class) {
                 if (mAiliyunApiService == null) {
-                    synchronized(AiliyunApiService::class.java) {
-                        if (mAiliyunApiService == null) {
-                            mAiliyunApiService = NetWorkManager.getRetrofit().create(
-                                AiliyunApiService::class.java
-                            )
-                        }
-                    }
+                    mAiliyunApiService = NetWorkManager.getInstance(Hosts.get(BuildConfig.ENV).ALIYUN).getRetrofit().create(AiliyunApiService.class);
                 }
-                return mAiliyunApiService
             }
+        }
+        return mAiliyunApiService;
     }
 }

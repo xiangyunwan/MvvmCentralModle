@@ -1,20 +1,20 @@
 package  com.example.testcentral.ui
 
 import android.app.Activity
-import com.example.testcentral.base.MyBaseModle
+import com.example.testcentral.base.ExternalApiModels
 import com.example.testcentral.bean.LoginBean
 import com.mobile.centaur.network.ApiException
+import com.mobile.centaur.network.BaseResponse
 import com.mobile.centaur.network.RxSubscriber
 import com.mobile.centaur.network.RxUtils
-import java.util.HashMap
+import java.util.*
 
 /**
- * Created by zhangzhenzhong
- * Date: 2020/10/28
- * Time: 19:47
- * Descriptions：
- */
-class LoginModle : MyBaseModle() {
+ * @Descirption:
+ * @Author zzz
+ * @Date 2022/1/6
+ **/
+class LoginModle : ExternalApiModels() {
 
     fun getLoginData(
         activity: Activity,
@@ -23,9 +23,9 @@ class LoginModle : MyBaseModle() {
         callBack: InfoCallBack<LoginBean>
     ) {
         val queryMap = HashMap<String, String>()
-        queryMap.put("unionid", unionid)
-        queryMap.put("info_type", info_type)
-        apiService!!.getThirdLoginData(queryMap!!)
+        queryMap["unionid"] = unionid
+        queryMap["info_type"] = info_type
+        getDefaultApiService().getThirdLoginData(queryMap)
             .compose(RxUtils.rxSchedulerHelper())
             .compose(RxUtils.handleResult())
             .subscribeWith(object : RxSubscriber<LoginBean>(activity) {
@@ -50,5 +50,28 @@ class LoginModle : MyBaseModle() {
             })
     }
 
+    fun getTestData(activity: Activity,callBack: InfoCallBack<LoginBean>){
+        getDefaultApiService().getAskSettingConfig("365688")
+            .compose(RxUtils.rxSchedulerHelper())
+            .compose(RxUtils.handleResult())
+            .subscribeWith(object : RxSubscriber<LoginBean>(activity) {
+                override fun onNext(loginBean: LoginBean) {
+                    super.onNext(loginBean)
+                    callBack.successInfo(loginBean)
+                }
 
+                override fun onError(t: Throwable?) {
+                    super.onError(t)
+                    if (t!! is ApiException) {
+                        callBack.failThrowable(t)
+                    }else{
+                        callBack.complete(t.message)
+                    }
+                }
+                override fun onComplete() {
+                    super.onComplete()
+                    callBack.complete(null)
+                }
+            })
+    }
 }

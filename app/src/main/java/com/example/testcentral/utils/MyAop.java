@@ -1,4 +1,4 @@
-package com.mobile.centaur.utils;
+package com.example.testcentral.utils;
 
 import android.util.Log;
 
@@ -12,11 +12,12 @@ import org.aspectj.lang.annotation.Before;
 /**
  * Created by zzz
  * on 2021/12/25
+ * AOP 打点
  */
 @Aspect
 public class MyAop {
 
-    @Before("execution(* my.test.myapplication.MainActivity.on*(android.os.Bundle))")
+    @Before("execution(* com.example.testcentral.ui.MainActivity.on*(android.os.Bundle))")
     public void activityBeforeTime(JoinPoint joinPoint) throws Throwable {
 
         String name = joinPoint.getSignature().getName();
@@ -24,7 +25,7 @@ public class MyAop {
         Log.d("TAG", "time=" + time+" name="+name);
     }
 
-    @AfterReturning("execution(* my.test.myapplication.MainActivity.on*(android.os.Bundle))")
+    @AfterReturning("execution(* com.example.testcentral.ui.MainActivity.on*(android.os.Bundle))")
     public void activityAfterTime(ProceedingJoinPoint joinPoint) throws Throwable {
         long before = System.currentTimeMillis();
         joinPoint.proceed();
@@ -33,7 +34,7 @@ public class MyAop {
 //        Log.d("TAG", "time=" + time+" name="+name);
     }
 
-    @After("call(* my.test.myapplication.MainActivity.showMsg(java.lang.String,java.lang.String))")
+    @After("call(* com.example.testcentral.ui.MainActivity.showMsg(java.lang.String,java.lang.String))")
     public void activityShowMsg(JoinPoint joinPoint) throws Throwable {
         Object[] args = joinPoint.getArgs();
         long time = System.currentTimeMillis();

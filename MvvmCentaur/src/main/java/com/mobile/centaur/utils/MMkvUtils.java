@@ -199,7 +199,7 @@ public class MMkvUtils {
      * TEST
      * @param spName
      */
-    public void testImportSharedPreferences(String spName) {
+    public void importSharedPreferences(String spName) {
         SharedPreferences preferences = context.getSharedPreferences(spName, MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putBoolean("bool", true);
@@ -240,7 +240,7 @@ public class MMkvUtils {
     }
 
     /**
-     * 推出mmkv
+     * 退出mmkv
      */
     public void quitMMkv(){
         MMKV.onExit();

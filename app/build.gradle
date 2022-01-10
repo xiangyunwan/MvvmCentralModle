@@ -4,6 +4,12 @@ plugins {
 //    id 'kotlin-kapt'
 }
 apply plugin: 'kotlin-kapt'
+apply plugin:'kotlin-android-extensions'
+
+//发布时间
+def releaseTime(isDebug) {
+    return isDebug ? "" : new Date().format("yyyy-MM-dd")
+}
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
@@ -17,14 +23,18 @@ android {
         multiDexEnabled = true
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        //多渠道打包
+        manifestPlaceholders = [BUGLY_APP_CHANNEL_VALUE: "umeng",
+                                UMENG_CHANNEL_VALUE    : name,
+                                CHANNEL_CODE           : "10001",
+                                APPLICATION_ID         : AndroidClient.appId,
+                                SCHEME                 : "appName",
+                                SCHEME_EDUCATION       : "appNameEducation",//兼容5.6.1之前版本
+        ]
+        missingDimensionStrategy 'dimensionName', 'requestedValue'
+        ndk {
+//            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
         }
     }
     compileOptions {
@@ -34,13 +44,87 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-
     buildFeatures{
         dataBinding = true
     }
-
     kapt{
         generateStubs =true
+    }
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "int", "ENV", "$ENV.DEBUG"
+            //开启混淆
+//            minifyEnabled true
+//            multiDexEnabled true
+//            zipAlignEnabled true     //是否支持zip
+//            shrinkResources false     // 移除无用的resource文件 在AS2.2之上minifyEnabled为true的时候已经去掉无用的资源
+        }
+        typeTest {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "int", "ENV", "$ENV.TEST"
+            //开启混淆
+//            minifyEnabled true
+//            multiDexEnabled true
+//            zipAlignEnabled true
+//            shrinkResources false
+        }
+        preRelease {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "int", "ENV", "$ENV.PRE"
+            //开启混淆
+            minifyEnabled true
+            multiDexEnabled true
+            zipAlignEnabled true
+            shrinkResources false
+        }
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "int", "ENV", "$ENV.RELEASE"
+            //开启混淆
+            minifyEnabled true
+            multiDexEnabled true
+            zipAlignEnabled true
+            shrinkResources false
+        }
+    }
+    flavorDimensions "channel"
+
+    productFlavors {
+        appName {
+            dimension "channel"
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: name,
+                                    CHANNEL_CODE       : "10001"]
+            matchingFallbacks = ['requestedValue']
+        }
+        //充分利用pre-dexing，只有api21 及以上才有这种功能，只有在开发阶段才是用这种功能
+        //注意不要使用高于于api19的方法和变量
+        appNameFaster {
+            minSdkVersion 21
+            dimension "channel"
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: name,
+                                    CHANNEL_CODE       : "10001"]
+            matchingFallbacks = ['requestedValue']
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        def isRelease = variant.getBuildType().isMinifyEnabled()
+        variant.outputs.all {
+            outputFileName = "app_name-${version_Name}-${releaseTime(!isRelease)}-${variant.getFlavorName()}-${variant.buildType.name}.apk"
+        }
+        if (isRelease) {
+            variant.assemble.doLast {
+                // 拷贝mapping文件
+                copy {
+                    from variant.getMappingFile()
+                    into "${rootDir}/mapping"
+                    rename {
+                        "mapping-${version_Name}-${variant.getFlavorName()}-${releaseTime(false)}.txt"
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -51,8 +135,4 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation project(':MvvmCentaur')
-    testImplementation 'junit:junit:4.+'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
 }

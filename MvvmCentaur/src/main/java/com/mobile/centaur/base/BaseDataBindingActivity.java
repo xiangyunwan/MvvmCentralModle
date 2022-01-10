@@ -15,7 +15,7 @@ import com.mobile.centaur.utils.LogUtils;
 import com.mobile.centaur.utils.StatusBarUtil;
 
 
-public abstract class BaseBlankActivity extends AppCompatActivity {
+public abstract class BaseDataBindingActivity extends AppCompatActivity {
     protected View view;
     private ImmersionBar mImmersionBar;
     protected Activity activity;

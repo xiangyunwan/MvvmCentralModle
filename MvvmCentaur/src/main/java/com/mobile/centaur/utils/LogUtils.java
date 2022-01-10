@@ -29,6 +29,7 @@ public class LogUtils {
     public static final boolean WRITE_FILE = false;
 
     private static final String TAG = "zzz";
+    public static final String NETWORK_LOG = "network_log";
 
     public static void d(String msg) {
         if (DEBUG) {

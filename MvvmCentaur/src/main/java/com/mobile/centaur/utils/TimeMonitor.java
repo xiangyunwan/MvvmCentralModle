@@ -1,8 +1,8 @@
-package my.test.myapplication;
+package com.mobile.centaur.utils;
 
 /**
- * Created by YiVjay
- * on 2020/8/25
+ * Created by zzz
+ * on 2021/12/25
  */
 
 import android.util.Log;

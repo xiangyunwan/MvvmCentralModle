@@ -1,4 +1,4 @@
-package com.mobile.centaur.apis
+package com.example.testcentral.base
 
 import com.mobile.centaur.network.BaseResponse
 import io.reactivex.rxjava3.core.Observable
@@ -9,7 +9,7 @@ import retrofit2.http.*
  * @Author zzz
  * @Date 2021/12/17
  **/
-interface BjMainUserApi {
+interface AiliyunApiService {
 
     /**
      * 测试地址

@@ -2,6 +2,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+
 //ext.compile_SdkVersion = 28
 //ext.build_ToolsVersion =  "30.0.2"
 //ext.min_SdkVersion = 19
@@ -38,18 +39,43 @@ android {
 
     buildTypes {
         debug {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            debuggable true
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "int", "ENV", "$ENV.DEBUG"
+            //开启混淆
+//            minifyEnabled true
+//            multiDexEnabled true
+//            zipAlignEnabled true     //是否支持zip
+//            shrinkResources false     // 移除无用的resource文件 在AS2.2之上minifyEnabled为true的时候已经去掉无用的资源
+        }
+        typeTest {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "int", "ENV", "$ENV.TEST"
+            //开启混淆
+//            minifyEnabled true
+//            multiDexEnabled true
+//            zipAlignEnabled true
+//            shrinkResources false
+        }
+        preRelease {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "int", "ENV", "$ENV.PRE"
+            //开启混淆
+            minifyEnabled true
             multiDexEnabled true
+            zipAlignEnabled true
+            shrinkResources false
         }
         release {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "int", "ENV", "$ENV.RELEASE"
+            //开启混淆
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            debuggable true
             multiDexEnabled true
+            zipAlignEnabled true
+            shrinkResources false
         }
     }
+
     lintOptions { // 消除lint警告
         abortOnError false
         checkReleaseBuilds false
@@ -130,6 +156,8 @@ dependencies {
 
     api 'com.tencent:mmkv-static:1.2.10'
     api 'com.getkeepsafe.relinker:relinker:1.4.3'
+
+    api 'org.aspectj:aspectjrt:1.9.6'
     //一个Android富文本类库，支持图文混排，支持编辑和预览，支持插入和删除图片。
 //    api 'com.github.sendtion:XRichText:1.9.4'
 

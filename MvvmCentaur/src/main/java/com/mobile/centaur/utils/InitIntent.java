@@ -1,4 +1,4 @@
-package my.test.myapplication;
+package com.mobile.centaur.utils;
 
 import android.app.IntentService;
 import android.content.Intent;
@@ -6,8 +6,8 @@ import android.content.Intent;
 import androidx.annotation.Nullable;
 
 /**
- * Created by YiVjay
- * on 2020/8/25
+ * Created by zzz
+ * on 2021/12/25
  */
 public class InitIntent extends IntentService {
     /**

@@ -7,8 +7,9 @@ import android.util.AttributeSet;
 
 import androidx.core.content.ContextCompat;
 
-import cn.jianke.api.utils.DensityUtil;
-import cn.jianke.hospital.R;
+import com.app.mobile.centaur.R;
+import com.mobile.centaur.utils.DensityUtil;
+
 
 /**
  * Created by Hu on 2017/1/3.
@@ -21,9 +22,9 @@ public class LineEditText extends androidx.appcompat.widget.AppCompatEditText {
     public LineEditText(Context context, AttributeSet attrs) {
         super(context, attrs);
         paint = new Paint();
-        paint.setStrokeWidth(DensityUtil.dip2px(getContext(),0.5f));
+        paint.setStrokeWidth(DensityUtil.dp2px(getContext(),0.5f));
         paint.setStyle(Paint.Style.STROKE);
-        paint.setColor(ContextCompat.getColor(getContext(), R.color.font_gray));
+        paint.setColor(ContextCompat.getColor(getContext(), R.color.picture_color_grey));
         // 开启抗锯齿 较耗内存
         paint.setAntiAlias(true);
     }
