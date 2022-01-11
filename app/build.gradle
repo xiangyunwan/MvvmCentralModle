@@ -86,6 +86,7 @@ android {
             multiDexEnabled true
             zipAlignEnabled true
             shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     flavorDimensions "channel"
