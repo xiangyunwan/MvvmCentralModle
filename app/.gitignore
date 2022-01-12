@@ -1,8 +1,6 @@
+.gradle/
+.idea/
+../build/
+local.properties
+build/
 *.iml
-.gradle
-/local.properties
-/build
-/captures
-.externalNativeBuild
-.idea/*
-.idea

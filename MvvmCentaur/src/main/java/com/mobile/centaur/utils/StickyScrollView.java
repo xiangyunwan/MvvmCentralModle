@@ -1,4 +1,4 @@
-package com.letv.jr.demanddeposit.view;
+package com.mobile.centaur.utils;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -16,8 +16,7 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.TranslateAnimation;
 import android.widget.ScrollView;
 
-import com.letv.jr.R;
-import com.letv.jr.base.view.scrollview.ScrollViewCallBack;
+import com.app.mobile.centaur.R;
 
 
 /**
@@ -529,6 +528,10 @@ public class StickyScrollView extends ScrollView {
       return true;
     }
     return false;
+  }
+
+  public interface ScrollViewCallBack{
+    int onScrollChanged(int distance);
   }
 
 }

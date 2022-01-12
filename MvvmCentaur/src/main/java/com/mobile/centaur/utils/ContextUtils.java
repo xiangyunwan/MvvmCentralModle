@@ -1,26 +1,14 @@
-package com.letv.jr;
+package com.mobile.centaur.utils;
 
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 
-import com.letv.jr.base.activity.GestureManageActivity;
-import com.letv.jr.base.activity.GesturePwUnLockActivity;
-import com.letv.jr.base.common.Constant;
-import com.letv.jr.base.common.dataservice.UserCenter;
-import com.letv.jr.base.common.util.SharePrefrenceUtil;
-import com.letv.jr.base.model.UserInformationBean;
-import com.letv.jr.welcomePage.AdvertisementActivity;
-import com.letv.jr.welcomePage.GuidancePageActivity;
-import com.letv.jr.welcomePage.SplashActivity;
+import com.mobile.centaur.base.BaseApplication;
 
 import java.util.List;
-
-import static com.facebook.FacebookSdk.getApplicationContext;
 
 /**
  * 功能说明： </br>
@@ -37,8 +25,8 @@ public class ContextUtils {
      * @return
      */
     public boolean isAppOnForeground() {
-        ActivityManager activityManager = (ActivityManager) getApplicationContext().getSystemService(Context.ACTIVITY_SERVICE);
-        String packageName = getApplicationContext().getPackageName();
+        ActivityManager activityManager = (ActivityManager) BaseApplication.getApplicatonContext().getSystemService(Context.ACTIVITY_SERVICE);
+        String packageName = BaseApplication.getApplicatonContext().getPackageName();
 
         List<ActivityManager.RunningAppProcessInfo> appProcesses = activityManager.getRunningAppProcesses();
         if (appProcesses == null)

@@ -1,4 +1,4 @@
-package com.zhangzhenzhong1.tools.utils;
+package com.mobile.centaur.utils;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -8,6 +8,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.Signature;
 import android.provider.Settings.Secure;
 import android.telephony.TelephonyManager;
+import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
@@ -279,8 +280,8 @@ public class DeviceInfoUtil {
 		String result = "";
 		try {
 			String s = getSignure(context);
-			String md5 = MD5Util.stringToMD5(MD5Util.stringToMD5(s));
-			String base64 = Base64.encodeBytes(new String(md5 + "_JDJR_Android").getBytes());
+			String md5 = MD5Utils.stringToMD5(MD5Utils.stringToMD5(s));
+			String base64 = JrBase64.encodeBytes(new String(md5 + "_JDJR_Android").getBytes());
 			result = base64.substring(base64.length() - 16);
 		} catch (Exception e) {
 		}

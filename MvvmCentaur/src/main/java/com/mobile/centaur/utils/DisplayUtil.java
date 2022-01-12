@@ -1,4 +1,4 @@
-package com.zhangzhenzhong1.tools.utils;
+package com.mobile.centaur.utils;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -8,7 +8,7 @@ import android.util.TypedValue;
 /**
  * @ClassName DisplayUtil 
  * @Description
- * @author gaixutian@jd.com 
+ * @author zzz
  * @date 2014-3-15 下午4:01:21
  */
 public class DisplayUtil {

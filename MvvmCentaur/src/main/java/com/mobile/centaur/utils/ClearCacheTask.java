@@ -1,10 +1,10 @@
-package com.zhangzhenzhong1.tools.utils;
+package com.mobile.centaur.utils;
 
 import android.os.AsyncTask;
 import android.widget.Toast;
 
-import com.zhangzhenzhong1.tools.R;
-import com.zhangzhenzhong1.tools.app.app;
+
+import com.mobile.centaur.base.BaseApplication;
 
 import java.io.File;
 
@@ -20,14 +20,14 @@ public class ClearCacheTask extends AsyncTask<Void, Object, Boolean>
     @Override
     protected Boolean doInBackground(Void... params)
     {
-        deleteFolderFile(app.getContext().getCacheDir(), false);
+        deleteFolderFile(BaseApplication.getApplicatonContext().getCacheDir(), false);
         return true;
     }
 
     @Override
     protected void onPostExecute(Boolean aBoolean)
     {
-        Toast.makeText(app.getContext(),"清除完成",Toast.LENGTH_SHORT).show();
+        Toast.makeText(BaseApplication.getApplicatonContext(),"清除完成",Toast.LENGTH_SHORT).show();
     }
 
     public void deleteFolderFile(File file, boolean deleteThisPath)

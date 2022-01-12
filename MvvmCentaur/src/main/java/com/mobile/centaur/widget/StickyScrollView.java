@@ -1,4 +1,4 @@
-package com.zhangzhenzhong1.tools.widget;
+package com.mobile.centaur.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -14,7 +14,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ScrollView;
 
 
-import com.zhangzhenzhong1.tools.R;
+import com.app.mobile.centaur.R;
 
 import java.util.LinkedList;
 import java.util.List;

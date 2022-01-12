@@ -1,4 +1,4 @@
-package com.letv.jr.common.util;
+package com.mobile.centaur.utils;
 
 import android.content.Context;
 import android.os.Environment;
@@ -25,7 +25,6 @@ import java.security.MessageDigest;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.letv.jr.common.util.FileUtil.createFile;
 
 /**
  * file cache util
@@ -190,7 +189,7 @@ public class FileCacheUtil {
      * @throws IOException
      */
     public static synchronized boolean JudgeSaveData(Context context, String fielName, String data) throws IOException {
-        if (!SAVE_TO_INNER_PATH && FileUtil.hasSdcard()) {
+        if (!SAVE_TO_INNER_PATH && SdCardFileUtil.hasSdcard()) {
             return writeExternalSDCardFile(context, fielName, data);
         } else {
             return saveDataToFile(context, fielName, data);
@@ -206,7 +205,7 @@ public class FileCacheUtil {
      * @throws IOException
      */
     public static synchronized void JudgeGetData(Context context, String fileName, final FileCacheCallBack cacheCallBack) throws IOException {
-        if (!SAVE_TO_INNER_PATH && FileUtil.hasSdcard()) {
+        if (!SAVE_TO_INNER_PATH && SdCardFileUtil.hasSdcard()) {
             readExternalSDCardFile(context, fileName, cacheCallBack);
         } else {
             getDataFromFile(context, fileName, cacheCallBack);
@@ -227,12 +226,12 @@ public class FileCacheUtil {
         if (TextUtils.isEmpty(data))
             return false;
         FileWriter fileWriter = null;
-        if (!FileUtil.makeDirs(EXTERNAL_SD_PATH)) {
+        if (!SdCardFileUtil.makeDirs(EXTERNAL_SD_PATH)) {
             return false;
         }
         String filePath = EXTERNAL_SD_PATH + strToMD5(fileName);
         try {
-            createFile(filePath);
+            SdCardFileUtil.createFile(filePath);
             fileWriter = new FileWriter(filePath, false);
             fileWriter.write(data);
             fileWriter.flush();
@@ -318,7 +317,7 @@ public class FileCacheUtil {
             return null;
         }
         String filePath = EXTERNAL_SD_PATH + strToMD5(fileName);
-        if (!FileUtil.isFileExist(filePath)) {
+        if (!SdCardFileUtil.isFileExist(filePath)) {
             cacheCallBack.onfail("filePath is null");
             return null;
         }
@@ -375,7 +374,7 @@ public class FileCacheUtil {
         }
         fileName = strToMD5(fileName);
         String filePath = context.getFilesDir().getPath() + File.separator + fileName;
-        if (!FileUtil.isFileExist(filePath)) {
+        if (!SdCardFileUtil.isFileExist(filePath)) {
             cacheCallBack.onfail("fail");
             return null;
         }
@@ -503,7 +502,7 @@ public class FileCacheUtil {
      */
     public static void delAllCacheBeanFile(Context context){
         String filePath = context.getFilesDir().getPath() + File.separator ;
-        FileUtil.delete(filePath, new FilenameFilter() {
+        SdCardFileUtil.delete(filePath, new FilenameFilter() {
             @Override
             public boolean accept(File dir, String filename) {
                 return false;

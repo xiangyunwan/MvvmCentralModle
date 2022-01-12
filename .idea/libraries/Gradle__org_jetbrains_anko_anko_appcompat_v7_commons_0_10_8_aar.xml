@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: org.jetbrains.anko:anko-appcompat-v7-commons:0.10.8@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b36539941b1b55539a5fc9597e8ad73c/jetified-anko-appcompat-v7-commons-0.10.8/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b36539941b1b55539a5fc9597e8ad73c/jetified-anko-appcompat-v7-commons-0.10.8/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b36539941b1b55539a5fc9597e8ad73c/jetified-anko-appcompat-v7-commons-0.10.8/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/063173036cf86e5915b296d480d9b45c/jetified-anko-appcompat-v7-commons-0.10.8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/063173036cf86e5915b296d480d9b45c/jetified-anko-appcompat-v7-commons-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/063173036cf86e5915b296d480d9b45c/jetified-anko-appcompat-v7-commons-0.10.8/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

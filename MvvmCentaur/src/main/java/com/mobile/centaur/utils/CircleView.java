@@ -1,4 +1,4 @@
-package com.letv.jr.demanddeposit.view;
+package com.mobile.centaur.utils;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -8,7 +8,8 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.letv.jr.R;
+import com.app.mobile.centaur.R;
+
 
 /**
  * 

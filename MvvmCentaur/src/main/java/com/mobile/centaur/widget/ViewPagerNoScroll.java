@@ -1,9 +1,10 @@
-package com.zhangzhenzhong1.tools.widget;
+package com.mobile.centaur.widget;
 
 import android.content.Context;
-import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * 

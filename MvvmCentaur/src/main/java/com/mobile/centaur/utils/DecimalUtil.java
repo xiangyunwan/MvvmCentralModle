@@ -1,4 +1,4 @@
-package com.zhangzhenzhong1.tools.utils;
+package com.mobile.centaur.utils;
 
 import android.widget.EditText;
 
@@ -8,7 +8,7 @@ import java.text.DecimalFormat;
 /**
  * 数字工具类
  * 
- * @author zhaoweiying
+ * @author zzz
  * 
  */
 public class DecimalUtil {

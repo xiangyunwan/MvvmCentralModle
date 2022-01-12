@@ -1,4 +1,4 @@
-package com.letv.jr.home.ui.activity;
+package com.mobile.centaur.utils;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -237,7 +237,7 @@ public class ActivitySplitAnimationUtil {
      * Extended ImageView that draws just part of an image, base on start/end position  
      * 自定义imageview，可根据设定的开始和结束坐标位置画出图片的一部分
      */
-    private static class MyImageView extends ImageView
+    private static class MyImageView extends androidx.appcompat.widget.AppCompatImageView
     {
     	private Rect mSrcRect;
     	private Rect mDstRect;
@@ -254,8 +254,8 @@ public class ActivitySplitAnimationUtil {
 	     * 设置宽度和坐标点来控制要切割的可见区域
 	     *
 	     * @param width		   The bitmap image
-	     * @param bmp          The start Y position
-	     * @param loc          The end Y position
+	     * @param startY          The start Y position
+	     * @param endY          The end Y position
 	     * @return
 	     */
 		public void setImageOffsets(int width, int startY, int endY)

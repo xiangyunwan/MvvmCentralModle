@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TsetCentral.iml" filepath="$PROJECT_DIR$/.idea/modules/TsetCentral.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MvvmCentaur/TsetCentral.MvvmCentaur.iml" filepath="$PROJECT_DIR$/.idea/modules/MvvmCentaur/TsetCentral.MvvmCentaur.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TsetCentral.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TsetCentral.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MvvmCentralModle.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/MvvmCentralModle.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestCentral.iml" filepath="$PROJECT_DIR$/.idea/modules/TestCentral.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MvvmCentaur/TestCentral.MvvmCentaur.iml" filepath="$PROJECT_DIR$/.idea/modules/MvvmCentaur/TestCentral.MvvmCentaur.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TestCentral.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TestCentral.app.iml" />
     </modules>
   </component>
 </project>

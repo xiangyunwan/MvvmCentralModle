@@ -20,6 +20,17 @@
         <attr name="label_text_size" format="float" />
     </declare-styleable>
 
+    <attr name="autoScaleTextViewStyle" format="reference" />
+    <declare-styleable name="AutoScaleTextView">
+        <attr name="minTextSize" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="GifView">
+        <attr name="gif" format="reference" />
+        <attr name="paused" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CustomTheme">
+        <attr name="gifViewStyle" format="reference" />
+    </declare-styleable>
 
     <declare-styleable name="ActionSheets">
         <attr name="actionSheetStyle" format="reference" />

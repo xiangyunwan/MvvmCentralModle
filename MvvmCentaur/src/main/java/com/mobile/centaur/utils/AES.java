@@ -1,4 +1,4 @@
-package com.allen.jr.testjni;
+package com.mobile.centaur.utils;
 
 import android.os.Bundle;
 import android.util.Log;

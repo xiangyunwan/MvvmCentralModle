@@ -1,4 +1,4 @@
-package com.zhangzhenzhong1.tools.widget;
+package com.mobile.centaur.widget;
 
 /**
  * Created by zhangzhenzhong1 on 2016/4/7.
@@ -20,7 +20,8 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.Scroller;
 
-import com.zhangzhenzhong1.tools.R;
+import com.app.mobile.centaur.R;
+
 
 /**
  * 卷尺控件类。由于时间比较紧，只有下班后有时间，因此只实现了基本功能。<br>
@@ -164,7 +165,7 @@ public class TuneWheel extends View {
     }
 
     private void drawWheel(Canvas canvas) {
-        Drawable wheel = getResources().getDrawable(R.drawable.ic_launcher);
+        Drawable wheel = getResources().getDrawable(R.drawable.default_img);
         wheel.setBounds(0, 0, getWidth(), getHeight());
         wheel.draw(canvas);
     }

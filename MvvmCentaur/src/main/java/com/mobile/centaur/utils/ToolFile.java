@@ -1,4 +1,4 @@
-package com.zhangzhenzhong1.tools.utils;
+package com.mobile.centaur.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

@@ -1,4 +1,4 @@
-package com.zhangzhenzhong1.tools.utils;
+package com.mobile.centaur.utils;
 
 import android.content.Context;
 import android.graphics.Typeface;
@@ -56,7 +56,7 @@ public class TextTypeface {
 	 */
 	public static void configRobotoLight(Context mContext, TextView... views){
 		if(null != views && views.length > 0 ){
-			Typeface mTypeface = TextTypeface.createBoldStyle(mContext, TextTypeface.STYLE.ROBOTO);
+			Typeface mTypeface = TextTypeface.createBoldStyle(mContext, STYLE.ROBOTO);
 			for (TextView view : views) {
 				view.setTypeface(mTypeface);
 			}
@@ -70,7 +70,7 @@ public class TextTypeface {
 	 */
 	public static void configRobotoThin(Context mContext, TextView... views){
 		if(null != views && views.length > 0 ){
-			Typeface mTypeface = TextTypeface.createNormalStyle(mContext, TextTypeface.STYLE.ROBOTO);
+			Typeface mTypeface = TextTypeface.createNormalStyle(mContext, STYLE.ROBOTO);
 			for (TextView view : views) {
 				view.setTypeface(mTypeface);
 			}
@@ -84,7 +84,7 @@ public class TextTypeface {
 	 */
 	public static void configRobotoBold(Context mContext, TextView... views){
 		if(null != views && views.length > 0 ){
-			Typeface mTypeface = TextTypeface.createRobotoType4BoldStyle(mContext, TextTypeface.STYLE.ROBOTO);
+			Typeface mTypeface = TextTypeface.createRobotoType4BoldStyle(mContext, STYLE.ROBOTO);
 			for (TextView view : views) {
 				view.setTypeface(mTypeface);
 			}
@@ -97,7 +97,7 @@ public class TextTypeface {
 	 */
 	public static void configOpenSansLight(Context mContext, TextView... views){
 		if(null != views && views.length > 0 ){
-			Typeface mTypeface = TextTypeface.createRobotoType4BoldStyle(mContext, TextTypeface.STYLE.ROBOTO);
+			Typeface mTypeface = TextTypeface.createRobotoType4BoldStyle(mContext, STYLE.ROBOTO);
 			for (TextView view : views) {
 				view.setTypeface(mTypeface);
 			}

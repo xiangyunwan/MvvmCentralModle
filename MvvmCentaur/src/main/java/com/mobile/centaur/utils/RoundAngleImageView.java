@@ -1,4 +1,4 @@
-package com.letv.jr.home.ui.view;
+package com.mobile.centaur.utils;
 
 /**
  * 功能说明： </br>
@@ -22,7 +22,8 @@ import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.letv.jr.R;
+import com.app.mobile.centaur.R;
+
 
 /**
  * 实现圆角image
@@ -30,7 +31,7 @@ import com.letv.jr.R;
  * @author Administrator
  *
  */
-public class RoundAngleImageView extends ImageView {
+public class RoundAngleImageView extends androidx.appcompat.widget.AppCompatImageView {
 
     private Paint paint;
     /**
@@ -60,9 +61,9 @@ public class RoundAngleImageView extends ImageView {
     private void init(Context context, AttributeSet attrs) {
 
         if (attrs != null) {
-            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.RoundAngleImageView);
-            roundWidth = a.getDimensionPixelSize(R.styleable.RoundAngleImageView_imgRoundWidth, roundWidth);
-            roundHeight = a.getDimensionPixelSize(R.styleable.RoundAngleImageView_imgRoundHeight, roundHeight);
+//            TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.RoundAngleImageView);
+//            roundWidth = a.getDimensionPixelSize(R.styleable.RoundAngleImageView_imgRoundWidth, roundWidth);
+//            roundHeight = a.getDimensionPixelSize(R.styleable.RoundAngleImageView_imgRoundHeight, roundHeight);
         } else {
             float density = context.getResources().getDisplayMetrics().density;
             roundWidth = (int) (roundWidth * density);

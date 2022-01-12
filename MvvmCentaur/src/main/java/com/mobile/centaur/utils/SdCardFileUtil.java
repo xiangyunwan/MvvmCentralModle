@@ -1,9 +1,7 @@
-package com.letv.jr.common.util;
+package com.mobile.centaur.utils;
 
 import android.os.Environment;
 import android.text.TextUtils;
-
-import org.junit.Test;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -24,9 +22,9 @@ import java.util.List;
  * <p>主要封装了一些对文件读写的操作
  *
  */
-public final class FileUtil {
+public final class SdCardFileUtil {
 
-    private FileUtil() {
+    private SdCardFileUtil() {
 //        throw new Error("￣﹏￣");
     }
 

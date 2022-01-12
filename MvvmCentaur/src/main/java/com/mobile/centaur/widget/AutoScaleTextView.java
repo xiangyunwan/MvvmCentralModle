@@ -1,4 +1,4 @@
-package com.zhangzhenzhong1.tools.widget;
+package com.mobile.centaur.widget;
 
 
 import android.content.Context;
@@ -6,9 +6,8 @@ import android.content.res.TypedArray;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.util.TypedValue;
-import android.widget.TextView;
 
-import com.zhangzhenzhong1.tools.R;
+import com.app.mobile.centaur.R;
 
 
 /**
@@ -18,7 +17,7 @@ import com.zhangzhenzhong1.tools.R;
  * @version 1.0
  * 
  */
-public class AutoScaleTextView extends TextView {
+public class AutoScaleTextView extends androidx.appcompat.widget.AppCompatTextView {
 
 	private Paint textPaint ;
 

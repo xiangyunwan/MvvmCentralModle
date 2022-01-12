@@ -1,4 +1,4 @@
-package org.yanzi.util;
+package com.mobile.centaur.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
@@ -27,8 +27,8 @@ public class BitmapUtil {
 		int h = drawable.getIntrinsicHeight();
 
 		// 取 drawable 的颜色格式
-		Bitmap.Config config = drawable.getOpacity() != PixelFormat.OPAQUE ? Bitmap.Config.ARGB_8888
-				: Bitmap.Config.RGB_565;
+		Config config = drawable.getOpacity() != PixelFormat.OPAQUE ? Config.ARGB_8888
+				: Config.RGB_565;
 		// 建立对应 bitmap
 		Bitmap bitmap = Bitmap.createBitmap(w, h, config);
 		// 建立对应 bitmap 的画布
