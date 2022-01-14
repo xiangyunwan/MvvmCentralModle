@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <com.mobile.centaur.views.TabItemView
+        <com.mobile.centaur.widget.TabItemView
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"

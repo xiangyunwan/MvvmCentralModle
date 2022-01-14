@@ -1,4 +1,4 @@
-package com.mobile.centaur.utils;
+package com.mobile.centaur.widget;
 
 /**
  * 功能说明： </br>
@@ -10,7 +10,6 @@ package com.mobile.centaur.utils;
  */
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -20,9 +19,6 @@ import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.RectF;
 import android.util.AttributeSet;
-import android.widget.ImageView;
-
-import com.app.mobile.centaur.R;
 
 
 /**

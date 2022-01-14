@@ -1,4 +1,4 @@
-package com.mobile.centaur.views;
+package com.mobile.centaur.widget;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;

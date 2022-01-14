@@ -17,7 +17,7 @@ class LoginViewModel : ViewModel() {
 
     fun loadData(activity: Activity,
                  unionid: String,
-                 info_type: String,) {
+                 info_type: String) {
 
         loginModle.getLoginData(
             activity,

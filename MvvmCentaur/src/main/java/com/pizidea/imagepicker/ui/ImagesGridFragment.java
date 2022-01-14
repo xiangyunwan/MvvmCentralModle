@@ -47,7 +47,7 @@ import androidx.fragment.app.Fragment;
 
 import com.app.mobile.centaur.R;
 import com.mobile.centaur.utils.LogUtils;
-import com.mobile.centaur.views.ImageItem;
+import com.mobile.centaur.widget.ImageItem;
 import com.pizidea.imagepicker.AndroidImagePicker;
 import com.pizidea.imagepicker.ImgLoader;
 import com.pizidea.imagepicker.PicassoImgLoader;

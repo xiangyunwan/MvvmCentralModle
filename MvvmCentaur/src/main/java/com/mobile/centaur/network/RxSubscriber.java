@@ -5,7 +5,6 @@ import android.app.Activity;
 
 import com.mobile.centaur.EventBean.ExceptionLogoutEventBean;
 import com.mobile.centaur.base.BaseConstants;
-import com.mobile.centaur.utils.DialogUtils;
 import com.mobile.centaur.utils.LogUtils;
 
 import org.greenrobot.eventbus.EventBus;

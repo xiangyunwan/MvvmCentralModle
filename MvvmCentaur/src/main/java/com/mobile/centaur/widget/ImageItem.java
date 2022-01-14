@@ -16,7 +16,7 @@
  *
  */
 
-package com.mobile.centaur.views;
+package com.mobile.centaur.widget;
 
 import java.io.Serializable;
 

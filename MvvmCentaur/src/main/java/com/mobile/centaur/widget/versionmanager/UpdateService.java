@@ -1,4 +1,4 @@
-package com.mobile.centaur.views.versionmanager;
+package com.mobile.centaur.widget.versionmanager;
 
 import android.annotation.SuppressLint;
 import android.app.Notification;

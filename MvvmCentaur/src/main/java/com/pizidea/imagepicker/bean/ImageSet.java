@@ -18,7 +18,7 @@
 
 package com.pizidea.imagepicker.bean;
 
-import com.mobile.centaur.views.ImageItem;
+import com.mobile.centaur.widget.ImageItem;
 
 import java.io.Serializable;
 import java.util.List;

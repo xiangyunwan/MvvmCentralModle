@@ -1,4 +1,4 @@
-package com.mobile.centaur.views;
+package com.mobile.centaur.widget;
 
 import android.annotation.SuppressLint;
 import android.content.Context;

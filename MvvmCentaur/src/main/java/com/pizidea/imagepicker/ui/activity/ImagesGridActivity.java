@@ -28,7 +28,7 @@ import android.widget.TextView;
 import androidx.fragment.app.FragmentActivity;
 
 import com.app.mobile.centaur.R;
-import com.mobile.centaur.views.ImageItem;
+import com.mobile.centaur.widget.ImageItem;
 import com.pizidea.imagepicker.AndroidImagePicker;
 import com.pizidea.imagepicker.ui.ImagesGridFragment;
 

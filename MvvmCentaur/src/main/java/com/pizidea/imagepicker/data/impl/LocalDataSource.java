@@ -29,7 +29,7 @@ import androidx.loader.content.CursorLoader;
 import androidx.loader.content.Loader;
 
 import com.app.mobile.centaur.R;
-import com.mobile.centaur.views.ImageItem;
+import com.mobile.centaur.widget.ImageItem;
 import com.pizidea.imagepicker.AndroidImagePicker;
 import com.pizidea.imagepicker.bean.ImageSet;
 import com.pizidea.imagepicker.data.DataSource;

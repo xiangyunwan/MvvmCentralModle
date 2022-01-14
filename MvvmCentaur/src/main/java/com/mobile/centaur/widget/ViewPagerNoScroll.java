@@ -8,7 +8,7 @@ import androidx.viewpager.widget.ViewPager;
 
 /**
  * 
- * 可以控制左右是否滑动的ViewPager
+ * 可控制Viewpager是否可以横向切换
  * @author zhangzhenzhong
  * @version 1.0
  * */
@@ -58,5 +58,13 @@ public class ViewPagerNoScroll extends ViewPager {
 			return false;
 		}
 
+	}
+
+	public boolean isCanScroll() {
+		return isCanScroll;
+	}
+
+	public void setCanScroll(boolean canScroll) {
+		isCanScroll = canScroll;
 	}
 }

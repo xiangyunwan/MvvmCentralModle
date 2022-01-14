@@ -1,4 +1,4 @@
-package com.mobile.centaur.utils;
+package com.mobile.centaur.widget;
 
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
@@ -23,6 +23,8 @@ import androidx.appcompat.app.AlertDialog;
 
 import com.app.mobile.centaur.R;
 import com.mobile.centaur.base.BaseConstants;
+import com.mobile.centaur.utils.DensityUtil;
+import com.mobile.centaur.utils.SpUtils;
 
 /**
  * author:zzz

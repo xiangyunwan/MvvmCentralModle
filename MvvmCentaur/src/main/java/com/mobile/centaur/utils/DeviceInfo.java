@@ -194,7 +194,7 @@ public class DeviceInfo implements Serializable {
 	 */
 	public String getSigntureStr(Context context) {
 		if (TextUtils.isEmpty(sign)) {
-			sign = DeviceInfoUtil.getSignatureStr(context);
+			sign = DeviceInfoUtils.getSignatureStr(context);
 		}
 		return sign;
 	}

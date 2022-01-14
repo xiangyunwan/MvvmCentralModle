@@ -30,7 +30,7 @@ import android.provider.MediaStore;
 
 import androidx.fragment.app.Fragment;
 
-import com.mobile.centaur.views.ImageItem;
+import com.mobile.centaur.widget.ImageItem;
 import com.pizidea.imagepicker.bean.ImageSet;
 import com.pizidea.imagepicker.ui.activity.ImagesGridActivity;
 

@@ -13,16 +13,16 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.TranslateAnimation;
 import android.widget.ScrollView;
 
-
 import com.app.mobile.centaur.R;
 
 import java.util.LinkedList;
 import java.util.List;
 
+
 /**
  * 可以设置悬浮view以及底部随着滚动隐藏view的scrollview，并拥有获取y坐标的接口
  * 
- * @author zhangjiazheng
+ * @author zhangzhenzhong
  * @version 1.0
  */
 public class StickyScrollView extends ScrollView {
@@ -74,6 +74,9 @@ public class StickyScrollView extends ScrollView {
   /**
    * 当点击Sticky的时候，实现某些背景的渐变
    */
+
+  private ScrollViewCallBack mViewCallBack;
+
 
   private OnScrollToBottomListener onScrollToBottom;
   private Runnable mInvalidataRunnable = new Runnable() {
@@ -129,9 +132,6 @@ public class StickyScrollView extends ScrollView {
     onScrollToBottom = listener;
   }
 
-  /**
-   * 是否滑动到最低部的监听
-   */
   public interface OnScrollToBottomListener{
     public void onScrollBottomListener(boolean isBottom);
   }
@@ -171,9 +171,14 @@ public class StickyScrollView extends ScrollView {
     if (onScrollListener != null) {
       onScrollListener.onScroll(t);
     }
+    if (mViewCallBack != null) {
+      mViewCallBack.onScrollChanged(t);
+    }
     showStickyView();
   }
-
+  public void setOnScrollCallBack(ScrollViewCallBack callBack){
+    mViewCallBack = callBack;
+  }
   /**
    * 展示悬浮view
    */
@@ -249,7 +254,6 @@ public class StickyScrollView extends ScrollView {
       canvas.restore();
     }
   }
-
   @Override
   public boolean dispatchTouchEvent(MotionEvent ev) {
     // 是否按下
@@ -288,21 +292,21 @@ public class StickyScrollView extends ScrollView {
       ev.offsetLocation(0,
           ((getScrollY() + mStickyViewTopOffset) + mHeaderOffset - mCurrentStickyView.getTop()));
     }
-
-    if (ev.getAction() == MotionEvent.ACTION_DOWN) {
-      hasNotDoneActionDown = false;
-    }
-
-    if (hasNotDoneActionDown) {
-      MotionEvent down = MotionEvent.obtain(ev);
-      down.setAction(MotionEvent.ACTION_DOWN);
-      super.onTouchEvent(down);
-      hasNotDoneActionDown = false;
-    }
-
-    if (ev.getAction() == MotionEvent.ACTION_UP || ev.getAction() == MotionEvent.ACTION_CANCEL) {
-      hasNotDoneActionDown = true;
-    }
+//
+//    if (ev.getAction() == MotionEvent.ACTION_DOWN) {
+//      hasNotDoneActionDown = false;
+//    }
+//
+//    if (hasNotDoneActionDown) {
+//      MotionEvent down = MotionEvent.obtain(ev);
+//      down.setAction(MotionEvent.ACTION_DOWN);
+//      super.onTouchEvent(down);
+//      hasNotDoneActionDown = false;
+//    }
+//
+//    if (ev.getAction() == MotionEvent.ACTION_UP || ev.getAction() == MotionEvent.ACTION_CANCEL) {
+//      hasNotDoneActionDown = true;
+//    }
     return super.onTouchEvent(ev);
   }
 
@@ -470,7 +474,7 @@ public class StickyScrollView extends ScrollView {
 
   // ---------------------scrollMove的部分代码---end----------
 
-  /****************** 曾繁添增加20150329(开始) ****************/
+  /******************增加20150329(开始) ****************/
   /**
    * 设置滚动接口，返回滚动的y坐标
    * 
@@ -494,9 +498,9 @@ public class StickyScrollView extends ScrollView {
 
   private OnScrollListener onScrollListener;
 
-  /****************** 曾繁添增加20150329(结束) ****************/
+  /******************增加20150329(结束) ****************/
 
-  /****************** zhangjiazheng 增加了头部偏移量 20160106(start) ****************/
+  /****************** 增加了头部偏移量 20160106(start) ****************/
   /**
    * adding the sticky view's offset of the scrollview which can change the distance between the top
    * of the scrollview and the sticky view dynamically. 增加顶部偏移量的方法，方便动态更改悬浮距离顶部的位置
@@ -506,14 +510,14 @@ public class StickyScrollView extends ScrollView {
   public void setHeaderOffset(int mHeaderOffset) {
     this.mHeaderOffset = mHeaderOffset;
   }
-  /****************** zhangjiazheng 增加了头部偏移量 20160106(end) ****************/
+  /******************增加了头部偏移量 20160106(end) ****************/
   
-  /****************** zhangjiazheng 增加了阴影属性 20160118(start) ****************/
+  /******************增加了阴影属性 20160118(start) ****************/
   public void setShadowHeight(int mShadowHeight) {
     this.defaultShadowHeight = mShadowHeight;
   }
   
-  /****************** zhangjiazheng 增加了阴影属性  20160118(end) ****************/
+  /****************** 增加了阴影属性  20160118(end) ****************/
   
   /**
    * 是否达到吸顶坐标
@@ -524,6 +528,10 @@ public class StickyScrollView extends ScrollView {
       return true;
     }
     return false;
+  }
+
+  public interface ScrollViewCallBack{
+    int onScrollChanged(int distance);
   }
 
 }
