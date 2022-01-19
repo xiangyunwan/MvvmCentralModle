@@ -2,14 +2,6 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
-
-//ext.compile_SdkVersion = 28
-//ext.build_ToolsVersion =  "30.0.2"
-//ext.min_SdkVersion = 19
-//ext.target_SdkVersion = 28
-//ext.version_Code = 1
-//ext.version_Name = "1.0.0"
-
 android {
     compileSdkVersion compile_SdkVersion
     buildToolsVersion build_ToolsVersion
@@ -105,34 +97,34 @@ dependencies {
 
     api "org.jetbrains.anko:anko:$anko_version"
 
-    api 'androidx.appcompat:appcompat:1.2.0'
+    api 'androidx.appcompat:appcompat:1.3.1'
     api 'com.google.android.material:material:1.2.1'
     api 'androidx.constraintlayout:constraintlayout:2.0.4'
 
-    api 'com.squareup.okhttp3:okhttp:4.9.0'
+    api 'com.squareup.okhttp3:okhttp:5.0.0-alpha.3'
     api 'com.squareup.retrofit2:retrofit:2.9.0'
     api 'com.squareup.retrofit2:converter-gson:2.9.0'
     api "com.squareup.retrofit2:adapter-rxjava3:2.9.0"
-    api 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    api 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3'
     api 'io.reactivex.rxjava3:rxandroid:3.0.0'
-    api 'io.reactivex.rxjava3:rxjava:3.0.0'
+    api 'io.reactivex.rxjava3:rxjava:3.1.3'
     api 'com.github.tbruyelle:rxpermissions:0.12'
-    api 'com.google.code.gson:gson:2.8.6'
+    api 'com.google.code.gson:gson:2.8.9'
     api 'com.google.zxing:core:3.4.1'
-    api 'com.airbnb.android:lottie:3.4.4'
-    api ('com.github.bumptech.glide:glide:4.11.0') {
+    api 'com.airbnb.android:lottie:4.2.2'
+    api ('com.github.bumptech.glide:glide:4.12.0') {
         exclude group: "com.android.support"
     }
-    api 'jp.wasabeef:glide-transformations:3.3.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    api 'jp.wasabeef:glide-transformations:4.3.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
 
     api 'com.gyf.immersionbar:immersionbar:2.3.2-beta01'
     api 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar' //滚动标签
-    api 'org.greenrobot:eventbus:3.2.0'
+    api 'org.greenrobot:eventbus:3.3.1'
     api 'androidx.multidex:multidex:2.0.1'
 
-    api 'com.alibaba:fastjson:1.2.75'
-    api 'com.alibaba:fastjson:1.2.75'
+    api 'com.alibaba:fastjson:1.2.79'
+    api 'com.alibaba:fastjson:1.2.79'
 
 
     // 需要在 工程根目录build.gradle 的allprojects中添加    maven { url "https://jitpack.io" }
@@ -156,10 +148,10 @@ dependencies {
 
     api 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
 
-    api 'com.tencent:mmkv-static:1.2.10'
-    api 'com.getkeepsafe.relinker:relinker:1.4.3'
+    api 'com.tencent:mmkv-static:1.2.12'
+    api 'com.getkeepsafe.relinker:relinker:1.4.4'
 
-    api 'org.aspectj:aspectjrt:1.9.6'
+    api 'org.aspectj:aspectjrt:1.9.8.RC3'
     //一个Android富文本类库，支持图文混排，支持编辑和预览，支持插入和删除图片。
 //    api 'com.github.sendtion:XRichText:1.9.4'
 
@@ -177,6 +169,6 @@ dependencies {
 //    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.5'
 
 
-    kapt "com.android.databinding:compiler:3.1.3"
+    kapt 'com.android.databinding:compiler:3.1.4'
 }
 

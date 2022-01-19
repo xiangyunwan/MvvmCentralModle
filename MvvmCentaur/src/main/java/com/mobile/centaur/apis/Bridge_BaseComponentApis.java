@@ -33,8 +33,8 @@ import com.mobile.centaur.utils.ImageUtils;
 import com.mobile.centaur.utils.LogUtils;
 import com.mobile.centaur.utils.PermissionsUtil;
 import com.mobile.centaur.utils.ProgressUtil;
-import com.mobile.centaur.views.ImageItem;
 import com.mobile.centaur.widget.ActionSheet;
+import com.mobile.centaur.widget.ImageItem;
 import com.pizidea.imagepicker.AndroidImagePicker;
 
 import java.io.File;
