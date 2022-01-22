@@ -8,8 +8,6 @@ import android.os.StatFs;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.luck.picture.lib.compress.Luban;
-import com.mobile.centaur.base.BaseApplication;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -860,16 +858,16 @@ public class FileUtils {
     //    public static final int MAX_SIZE = 5 * 1024;
     public static final int MAX_SIZE = 2 * 100;
 
-    public static List<File> FileCompress(Context mContext, List<String> paths) {
-
-        try {
-            return Luban.with(mContext).ignoreBy(MAX_SIZE).load(paths).get();
-        } catch (IOException e) {
-            LogUtils.e(e.getMessage());
-            return null;
-        }
-
-    }
+//    public static List<File> FileCompress(Context mContext, List<String> paths) {
+//
+//        try {
+//            return Luban.with(mContext).ignoreBy(MAX_SIZE).load(paths).get();
+//        } catch (IOException e) {
+//            LogUtils.e(e.getMessage());
+//            return null;
+//        }
+//
+//    }
 
 //    public static void fileCompress(List<File> files, Action action) {
 //

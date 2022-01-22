@@ -1,6 +1,7 @@
 package  com.example.testcentral.ui
 
 import android.app.Activity
+import androidx.recyclerview.widget.RecyclerView
 import com.example.testcentral.base.ExternalApiModels
 import com.example.testcentral.bean.LoginBean
 import com.mobile.centaur.network.ApiException
@@ -15,7 +16,6 @@ import java.util.*
  * @Date 2022/1/6
  **/
 class LoginModle : ExternalApiModels() {
-
     fun getLoginData(
         activity: Activity,
         unionid: String,

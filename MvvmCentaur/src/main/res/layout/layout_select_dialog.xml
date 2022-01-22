@@ -37,7 +37,7 @@
             android:padding="@dimen/dimens_size_15"
             android:textSize="13sp"
             android:textColor="@color/white"
-            android:background="@color/picture_color_light_grey"
+            android:background="#00ff00"
             android:layout_weight="1"
             android:gravity="center" />
 
@@ -53,7 +53,7 @@
             android:textColor="@color/color_333333"
             android:textSize="13sp"
             android:layout_weight="1"
-            android:background="@color/picture_color_light_grey"
+            android:background="#ff00ff"
             android:gravity="center" />
 
     </LinearLayout>

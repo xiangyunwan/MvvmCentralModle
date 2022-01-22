@@ -33,7 +33,7 @@
 -printmapping ./mapping/mapping.txt # 输出mapping.txt文件
 -printseeds ./mapping/seeds.txt # 输出seeds.txt文件
 -printusage ./mapping/usage.txt # 输出usage.txt文件
--useuniqueclassmembernames                  # 把混淆类中的方法名也混淆
+#-useuniqueclassmembernames                  # 把混淆类中的方法名也混淆
 -allowaccessmodification                    # 优化时允许访问并修改有修饰符的类及类的成员
 -renamesourcefileattribute SourceFile       # 将源码中有意义的类名转换成SourceFile，用于混淆具体崩溃代码
 -keepattributes SourceFile,LineNumberTable  # 保留行号
@@ -69,33 +69,49 @@
     public static int d(...);
     public static int e(...);
 }
--assumenoexternalsideeffects class java.lang.StringBuilder {
-    public java.lang.StringBuilder();
-    public java.lang.StringBuilder(int);
-    public java.lang.StringBuilder(java.lang.String);
-    public java.lang.StringBuilder append(java.lang.Object);
-    public java.lang.StringBuilder append(java.lang.String);
-    public java.lang.StringBuilder append(java.lang.StringBuffer);
-    public java.lang.StringBuilder append(char[]);
-    public java.lang.StringBuilder append(char[], int, int);
-    public java.lang.StringBuilder append(boolean);
-    public java.lang.StringBuilder append(char);
-    public java.lang.StringBuilder append(int);
-    public java.lang.StringBuilder append(long);
-    public java.lang.StringBuilder append(float);
-    public java.lang.StringBuilder append(double);
-    public java.lang.String toString();
+#-assumenoexternalsideeffects class java.lang.StringBuilder {
+#    public java.lang.StringBuilder();
+#    public java.lang.StringBuilder(int);
+#    public java.lang.StringBuilder(java.lang.String);
+#    public java.lang.StringBuilder append(java.lang.Object);
+#    public java.lang.StringBuilder append(java.lang.String);
+#    public java.lang.StringBuilder append(java.lang.StringBuffer);
+#    public java.lang.StringBuilder append(char[]);
+#    public java.lang.StringBuilder append(char[], int, int);
+#    public java.lang.StringBuilder append(boolean);
+#    public java.lang.StringBuilder append(char);
+#    public java.lang.StringBuilder append(int);
+#    public java.lang.StringBuilder append(long);
+#    public java.lang.StringBuilder append(float);
+#    public java.lang.StringBuilder append(double);
+#    public java.lang.String toString();
+#}
+#-assumenoexternalreturnvalues public final class java.lang.StringBuilder {
+#    public java.lang.StringBuilder append(java.lang.Object);
+#    public java.lang.StringBuilder append(java.lang.String);
+#    public java.lang.StringBuilder append(java.lang.StringBuffer);
+#    public java.lang.StringBuilder append(char[]);
+#    public java.lang.StringBuilder append(char[], int, int);
+#    public java.lang.StringBuilder append(boolean);
+#    public java.lang.StringBuilder append(char);
+#    public java.lang.StringBuilder append(int);
+#    public java.lang.StringBuilder append(long);
+#    public java.lang.StringBuilder append(float);
+#    public java.lang.StringBuilder append(double);
+#}
+
+
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep class * extends com.bumptech.glide.module.AppGlideModule {
+ <init>(...);
 }
--assumenoexternalreturnvalues public final class java.lang.StringBuilder {
-    public java.lang.StringBuilder append(java.lang.Object);
-    public java.lang.StringBuilder append(java.lang.String);
-    public java.lang.StringBuilder append(java.lang.StringBuffer);
-    public java.lang.StringBuilder append(char[]);
-    public java.lang.StringBuilder append(char[], int, int);
-    public java.lang.StringBuilder append(boolean);
-    public java.lang.StringBuilder append(char);
-    public java.lang.StringBuilder append(int);
-    public java.lang.StringBuilder append(long);
-    public java.lang.StringBuilder append(float);
-    public java.lang.StringBuilder append(double);
+-keep public enum com.bumptech.glide.load.ImageHeaderParser$** {
+  **[] $VALUES;
+  public *;
 }
+-keep class com.bumptech.glide.load.data.ParcelFileDescriptorRewinder$InternalRewinder {
+  *** rewind();
+}
+
+# for DexGuard only
+#-keepresourcexmlelements manifest/application/meta-data@value=GlideModule

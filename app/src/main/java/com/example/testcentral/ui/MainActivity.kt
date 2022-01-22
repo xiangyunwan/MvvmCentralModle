@@ -17,7 +17,9 @@ class MainActivity : BaseBlankActivity(){
     override fun initView() {
         loginViewModel= LoginViewModel()
         loginViewModel.liveData.observe(this,
-            { result -> tvCentral?.text = result?.name })
+            {
+                    result -> tvCentral?.text = result?.name
+            })
     }
 
     override fun initListener() {
