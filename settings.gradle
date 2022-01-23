@@ -1,4 +1,7 @@
 include ':MvvmCentaur'
 //include ':HtmlTextView'
-include ':app'
-rootProject.name = "TestCentral"
+include ':app',':annotation', ':compiler',':login'
+project(':MvvmCentaur').projectDir=new File('modles_base/MvvmCentaur')
+project(':annotation').projectDir=new File('modles_base/annotation')
+project(':compiler').projectDir=new File('modles_base/compiler')
+project(':login').projectDir=new File('modles_main/login')
