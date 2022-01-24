@@ -9,15 +9,15 @@ def releaseTime(isDebug) {
     return isDebug ? "" : new Date().format("yyyy-MM-dd")
 }
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion AndroidSdk.compileSdkVersion
+    buildToolsVersion AndroidSdk.buildToolsVersion
 
     defaultConfig {
         applicationId "com.example.testcentral"
-        minSdkVersion min_SdkVersion
-        targetSdkVersion target_SdkVersion
-        versionCode version_Code
-        versionName version_Name
+        minSdkVersion AndroidSdk.minSdkVersion
+        targetSdkVersion AndroidSdk.targetSdkVersion
+        versionCode AndroidClient.versionCode
+        versionName AndroidClient.versionName
         multiDexEnabled = true
         versionCode 1
         versionName "1.0"

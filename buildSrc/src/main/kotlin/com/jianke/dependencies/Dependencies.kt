@@ -10,12 +10,12 @@ object Kotlin {
 }
 
 object AndroidSdk {
-    const val minSdkVersion = 19
-    const val targetSdkVersion = 28
-    const val compileSdkVersion = 28
+    const val minSdkVersion = 21
+    const val targetSdkVersion = 29
+    const val compileSdkVersion = 29
 
     //AndroidStudio 4.2生成的代码里面已经不再需要该属性了
-    const val buildToolsVersion = "28.0.3"
+    const val buildToolsVersion = "30.0.2"
 }
 
 object AndroidClient {
@@ -66,47 +66,58 @@ object BuildPlugins {
 
 object Libraries {
     object Versions {
-        const val constraintlayout = "2.0.4"
-        const val wechatSdk = "5.5.8"
-//        const val JKPAY = "2.0.0.0"
-        const val JKKERNEL = "2.1.1.2"
-        const val JKAPI = "2.1.0.2"
-        const val X5WEBVIEW = "2.0.1.1"
-        const val appcompat = "1.2.0"
-//        const val rxbinding = "0.4.0"
-        const val eventbus = "3.0.0"
-//        const val easydeviceinfo = "2.0.2"
-        const val multidex = "2.0.0"
-        const val glide = "4.12.0"
-        const val glideTransformations = "2.0.1"
-        const val glideOkhttp3Integration = "1.5.0"
-        const val retrofit = "2.4.0"
-        const val okhttp = "3.12.0"
-        const val loggingInterceptor = "3.12.0"
-        const val gson = "2.8.6"
-        const val converterGson = "2.4.0"
-        const val bugtagsLib = "3.1.3"
+        const val anko = "0.10.7"
+        const val appcompat = "1.3.1"
         const val material = "1.2.1"
-//        const val androidGifDrawable = "1.2.3"
-//        const val baseAdapter = "3.0.3"
-        const val greendao = "3.3.0"
-        const val androidDatabaseSqlcipher = "3.5.5"
-//        const val greenDaoUpgradeHelper = "v1.3.0"
+        const val constraintlayout = "2.0.4"
+        const val okhttp = "5.0.0-alpha.3"
+        const val retrofit = "2.9.0"
+        const val adapterRxjava3 = "2.9.0"
+        const val loggingInterceptor = "5.0.0-alpha.3"
+        const val gson = "2.8.9"
+        const val lottie = "4.2.2"
+        const val immersionbar = "2.3.2-beta01"
+        const val glide = "4.12.0"
+        const val glideCompiler = "4.12.0"
+        const val glideTransformations = "4.12.0"
 
+        const val FlycoTabLayout_Lib = "2.1.2@aar"
+        const val eventbus = "3.3.1"
+        const val multidex = "2.0.1"
+        const val zxing = "3.4.1"
+        const val fastjson = "1.2.79"
+        const val jsbridge = "1.0.4"
+        const val BaseRecyclerViewAdapterHelper = "3.0.4"
+        const val ViewPagerIndicator = "1.1.9"
+        const val mmkv = "1.2.12"
+        const val converterGson = "2.9.0"
+        const val rxjava3Android = "3.0.0"
+        const val rxjava3 = "3.1.3"
+        const val greendao = "3.3.0"
+        const val luban = "1.0.0"
+        const val svgplayer = "2.4.4"
+        const val androidDatabaseSqlcipher = "3.5.5"
+        //        const val greenDaoUpgradeHelper = "v1.3.0"
+        const val arouterCompiler = "1.2.2"
+
+
+        const val wechatSdk = "5.5.8"
+        const val X5WEBVIEW = "2.0.1.1"
+        //        const val rxbinding = "0.4.0"
+//        const val easydeviceinfo = "2.0.2"
+        const val glideOkhttp3Integration = "1.5.0"
+        const val bugtagsLib = "3.1.3"
+
+        //        const val androidGifDrawable = "1.2.3"
+//        const val baseAdapter = "3.0.3"
 //        const val citypickerview = "1.0.0"
         const val AndroidPickerView = "4.1.9"
         const val badgeview = "1.1.3"
         const val butterknife = "10.2.1"
         const val butterknifeCompiler = "10.2.1"
         //        const val retrofit2FastJsonConverter = "1.2"
-        const val fastjson = "1.2.62"
         const val converterFastjsonAndroid = "2.1.0"
-        const val rxjava2 = "2.2.6"
-        const val rxjava2Android = "2.1.1"
-        const val adapterRxjava = "2.4.0"
-        const val adapterRxjava2 = "2.3.0"
         const val sensorsAnalyticsSDK = "5.3.1"
-        const val luban = "1.0.0"
         const val hmsPush = "5.1.1.301"
         const val gtsdk = "3.1.4.0"
         const val gtc = "3.1.0.0"
@@ -121,7 +132,7 @@ object Libraries {
         const val EasyPopup = "1.1.2"
         const val ucrop = "2.2.2"
         const val legacySupportV4 = "1.0.0"
-        const val zxing = "3.3.0"
+
         const val richtext = "3.0.8"
         const val statusbarutil = "1.5.1"
         const val jkQiniu = "1.0.3"
@@ -134,7 +145,7 @@ object Libraries {
         const val ndkbitmapArmv7a = "0.6.4"
         const val lifecycleViewmodelKtx = "2.2.0"
         const val lifecycleExtensions = "2.0.0"
-        const val arouterCompiler = "1.2.2"
+
         const val aspectjrt = "1.8.10"
         const val coreKtx = "1.3.2"
         const val voiceSdk = "3.3.1"
@@ -154,44 +165,57 @@ object Libraries {
         const val expandableTextView = "1.0.3"
         const val qiniu = "7.3.15"
         const val viewpager2 = "1.0.0"
-        const val svgplayer = "2.4.4"
-        const val anko = "0.10.7"
+
         const val buglySdk = "4.0.0"
     }
-    const val constraintlayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
-    const val wechatSdk = "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:${Versions.wechatSdk}"
-    const val x5webview = "com.jianke:X5WEBVIEW:${Versions.X5WEBVIEW}"
+    const val anko = "org.jetbrains.anko:anko-commons:${Versions.anko}"
     const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
-    const val eventbus = "org.greenrobot:eventbus:${Versions.eventbus}"
-    const val multidex = "androidx.multidex:multidex:${Versions.multidex}"
+    const val material = "com.google.android.material:material:${Versions.material}"
+    const val constraintlayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
+    const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    const val converterGson = "com.squareup.retrofit2:converter-gson:${Versions.converterGson}"
+    const val rxjava3 = "io.reactivex.rxjava3:rxjava:${Versions.rxjava3}"
+    const val adapterRxjava3 = "com.squareup.retrofit2:adapter-rxjava3:${Versions.adapterRxjava3}"
+    const val rxjava3Android = "io.reactivex.rxjava3:rxandroid:${Versions.rxjava3Android}"
+    const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
+    const val gson = "com.google.code.gson:gson:${Versions.gson}"
+    const val zxing = "com.google.zxing:core:${Versions.zxing}"
+    const val lottie = "com.airbnb.android:lottie:${Versions.lottie}"
+    const val immersionbar = "com.gyf.immersionbar:immersionbar:${Versions.immersionbar}"
     const val glide = "com.github.bumptech.glide:glide:${Versions.glide}"
     const val glideTransformations = "jp.wasabeef:glide-transformations:${Versions.glideTransformations}"
+    const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glideCompiler}"
     const val glideOkhttp3Integration = "com.github.bumptech.glide:okhttp3-integration:${Versions.glideOkhttp3Integration}"
-    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
-    const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
-    const val gson = "com.google.code.gson:gson:${Versions.gson}"
-    const val converterGson = "com.squareup.retrofit2:converter-gson:${Versions.converterGson}"
-    const val bugtagsLib = "com.bugtags.library:bugtags-lib:${Versions.bugtagsLib}"
-    const val material = "com.google.android.material:material:${Versions.material}"
-//    const val androidGifDrawable = "pl.droidsonroids.gif:android-gif-drawable:${Versions.androidGifDrawable}"
-//    const val baseAdapter = "com.zhy:base-adapter:${Versions.baseAdapter}"
+    const val flycoTabLayout_Lib = "com.flyco.tablayout:FlycoTabLayout_Lib:${Versions.FlycoTabLayout_Lib}"
+    const val eventbus = "org.greenrobot:eventbus:${Versions.eventbus}"
+    const val multidex = "androidx.multidex:multidex:${Versions.multidex}"
+    const val fastjson = "com.alibaba:fastjson:${Versions.fastjson}"
+    const val jsbridge = "com.github.lzyzsd:jsbridge:${Versions.jsbridge}"
+    const val baseRecyclerViewAdapterHelper = "com.github.CymChad:BaseRecyclerViewAdapterHelper:${Versions.BaseRecyclerViewAdapterHelper}"
+    const val viewPagerIndicator = "com.shizhefei:ViewPagerIndicator:${Versions.ViewPagerIndicator}"
+    const val mmkv = "com.tencent:mmkv-static:${Versions.mmkv}"
     const val greendao = "org.greenrobot:greendao:${Versions.greendao}"
+    const val luban = "com.jianke:Luban:${Versions.luban}"
+    const val svgplayer = "com.github.yyued:SVGAPlayer-Android:${Versions.svgplayer}"
+    const val arouterCompiler = "com.alibaba:arouter-compiler:${Versions.arouterCompiler}"
+
+
+
+    const val wechatSdk = "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:${Versions.wechatSdk}"
+    const val x5webview = "com.jianke:X5WEBVIEW:${Versions.X5WEBVIEW}"
+    const val bugtagsLib = "com.bugtags.library:bugtags-lib:${Versions.bugtagsLib}"
+    //    const val androidGifDrawable = "pl.droidsonroids.gif:android-gif-drawable:${Versions.androidGifDrawable}"
+//    const val baseAdapter = "com.zhy:base-adapter:${Versions.baseAdapter}"
     const val androidDatabaseSqlcipher = "net.zetetic:android-database-sqlcipher:${Versions.androidDatabaseSqlcipher}"
-//    const val greenDaoUpgradeHelper = "com.github.yuweiguocn:GreenDaoUpgradeHelper:${Versions.greenDaoUpgradeHelper}"
+    //    const val greenDaoUpgradeHelper = "com.github.yuweiguocn:GreenDaoUpgradeHelper:${Versions.greenDaoUpgradeHelper}"
 //    const val citypickerview = "liji.library.dev:citypickerview:${Versions.citypickerview}"
     const val AndroidPickerView = "com.contrarywind:Android-PickerView:${Versions.AndroidPickerView}"
     const val badgeview = "q.rorbin:badgeview:${Versions.badgeview}"
-//    const val butterknife = "com.jakewharton:butterknife:${Versions.butterknife}"
+    //    const val butterknife = "com.jakewharton:butterknife:${Versions.butterknife}"
     const val butterknifeCompiler = "com.jakewharton:butterknife-compiler:${Versions.butterknifeCompiler}"
-    const val fastjson = "com.alibaba:fastjson:${Versions.fastjson}"
     const val converterFastjsonAndroid = "org.ligboy.retrofit2:converter-fastjson-android:${Versions.converterFastjsonAndroid}"
-    const val rxjava2 = "io.reactivex.rxjava2:rxjava:${Versions.rxjava2}"
-    const val rxjava2Android = "io.reactivex.rxjava2:rxandroid:${Versions.rxjava2Android}"
-    const val adapterRxjava = "com.squareup.retrofit2:adapter-rxjava:${Versions.adapterRxjava}"
-    const val adapterRxjava2 = "com.squareup.retrofit2:adapter-rxjava2:${Versions.adapterRxjava2}"
-    const val loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}"
     const val sensorsAnalyticsSDK = "com.sensorsdata.analytics.android:SensorsAnalyticsSDK:${Versions.sensorsAnalyticsSDK}"
-    const val luban = "com.jianke:Luban:${Versions.luban}"
     const val hmsPush = "com.huawei.hms:push:${Versions.hmsPush}"// 华为推送
     const val gtsdk = "com.getui:gtsdk:${Versions.gtsdk}"       // 个推SDK
     const val gtc = "com.getui:gtc:${Versions.gtc}"             // 个推核心组件
@@ -215,12 +239,9 @@ object Libraries {
     const val kotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:${Kotlin.kotlinVersion}"
     const val kotlinStdlibJdk7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Kotlin.kotlinVersion}"
 
-    const val zxing = "com.google.zxing:core:${Versions.zxing}"
     const val richtext = "com.zzhoujay.richtext:richtext:${Versions.richtext}"
     const val statusbarutil = "com.jaeger.statusbarutil:library:${Versions.statusbarutil}"
-
     const val jkQiniu = "com.jianke:QINIU:${Versions.jkQiniu}"
-
     const val socketIoClient = "io.socket:socket.io-client:${Versions.socketIoClient}"
     const val exoplayerCore = "com.google.android.exoplayer:exoplayer-core:${Versions.exoplayerCore}"
     const val exoplayerHls = "com.google.android.exoplayer:exoplayer-hls:${Versions.exoplayerHls}"
@@ -231,7 +252,7 @@ object Libraries {
     const val lifecycleViewmodelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycleViewmodelKtx}"
     const val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycleExtensions}"
 
-    const val arouterCompiler = "com.alibaba:arouter-compiler:${Versions.arouterCompiler}"
+
     const val aspectjrt = "org.aspectj:aspectjrt:${Versions.aspectjrt}"
 
     const val voiceSdk = "io.agora.rtc:voice-sdk:${Versions.voiceSdk}"
@@ -253,8 +274,8 @@ object Libraries {
     const val expandableTextView = "cn.carbs.android:ExpandableTextView:${Versions.expandableTextView}"
     const val qiniu = "com.qiniu:qiniu-android-sdk:${Versions.qiniu}"
     const val viewpager2 = "androidx.viewpager2:viewpager2:${Versions.viewpager2}"
-    const val svgplayer = "com.github.yyued:SVGAPlayer-Android:${Versions.svgplayer}"
-    const val anko = "org.jetbrains.anko:anko-commons:${Versions.anko}"
+
+
     const val buglySdk = "com.tencent.bugly:crashreport:${Versions.buglySdk}"
 }
 object TestLibraries {
