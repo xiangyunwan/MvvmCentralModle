@@ -97,6 +97,7 @@ dependencies {
 
     api fileTree(dir:'libs',include: ['*.jar'])
     api Libraries.glide
+    api Libraries.glideTransformations
     kapt Libraries.glideCompiler
 
     api Libraries.kotlinStdlib
@@ -126,25 +127,26 @@ dependencies {
     api Libraries.mmkv
     api Libraries.rxjava3
     api Libraries.svgplayer
+    api Libraries.jsbridge
+    api Libraries.viewPagerIndicator
+    api Libraries.aspectjrt
 //    implementation 'com.alibaba:arouter-api:1.5.1'
 //    kapt Libraries.arouterCompiler
 
 
-    api 'com.github.lzyzsd:jsbridge:1.0.4'
+
 //    api 'com.github.LuckSiege.PictureSelector:picture_library:v2.5.9'
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.4'
     //非常著名的抽屉控件
     api 'com.sothree.slidinguppanel:library:3.4.0'
 //    api 'com.joanzapata.android:base-adapter-helper:1.1.11'
     api 'com.github.woxingxiao:SlidingUpPanelLayout:1.1.0'
+    api 'com.github.tbruyelle:rxpermissions:0.12'
     //自动生成表格框架
     api 'com.github.huangyanbin:SmartTable:2.2.0'
     api 'com.iqiyi.xcrash:xcrash-android-lib:3.0.0'
-    api 'com.shizhefei:ViewPagerIndicator:1.1.9'
     api 'com.github.barteksc:android-pdf-viewer:3.2.0-beta.1'
-    api 'com.tencent:mmkv-static:1.2.12'
     api 'com.getkeepsafe.relinker:relinker:1.4.4'
-    api 'org.aspectj:aspectjrt:1.9.8.RC3'
     //一个Android富文本类库，支持图文混排，支持编辑和预览，支持插入和删除图片。
 //    api 'com.github.sendtion:XRichText:1.9.4'
     //富文本

@@ -79,7 +79,7 @@ object Libraries {
         const val immersionbar = "2.3.2-beta01"
         const val glide = "4.12.0"
         const val glideCompiler = "4.12.0"
-        const val glideTransformations = "4.12.0"
+        const val glideTransformations = "4.3.0"
 
         const val FlycoTabLayout_Lib = "2.1.2@aar"
         const val eventbus = "3.3.1"
