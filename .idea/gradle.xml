@@ -11,9 +11,13 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/MvvmCentaur" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/modles_base/MvvmCentaur" />
+            <option value="$PROJECT_DIR$/modles_base/annotation" />
+            <option value="$PROJECT_DIR$/modles_base/compiler" />
+            <option value="$PROJECT_DIR$/modles_base/startup" />
+            <option value="$PROJECT_DIR$/modles_main/login" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

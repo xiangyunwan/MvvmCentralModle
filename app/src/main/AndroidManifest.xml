@@ -20,6 +20,16 @@
         <meta-data
             android:name="CHANNEL_CODE"
             android:value="${CHANNEL_CODE}" />
+
+        <provider
+            android:name="com.example.testcentral.utils.StartupProvider"
+            android:authorities="${applicationId}.android_startup"
+            android:exported="false">
+
+            <meta-data
+                android:name="com.example.startup.tasks.Task5"
+                android:value="android.startup" />
+        </provider>
     </application>
 
 </manifest>

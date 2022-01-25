@@ -39,8 +39,6 @@
         <activity
             android:name="com.mobile.centaur.h5container.ui.DemoActivity"
             android:screenOrientation="portrait" />
-
-
     </application>
 
 </manifest>

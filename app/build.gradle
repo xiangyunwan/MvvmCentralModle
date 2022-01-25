@@ -19,8 +19,6 @@ android {
         versionCode AndroidClient.versionCode
         versionName AndroidClient.versionName
         multiDexEnabled = true
-        versionCode 1
-        versionName "1.0"
         //多渠道打包
         manifestPlaceholders = [BUGLY_APP_CHANNEL_VALUE: "umeng",
                                 UMENG_CHANNEL_VALUE    : name,
@@ -134,4 +132,5 @@ android {
 
 dependencies {
     implementation project(':MvvmCentaur')
+    implementation project(':startup')
 }

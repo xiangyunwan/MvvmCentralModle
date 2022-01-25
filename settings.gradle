@@ -1,7 +1,8 @@
 include ':MvvmCentaur'
 //include ':HtmlTextView'
-include ':app',':annotation', ':compiler',':login'
+include ':app',':annotation', ':compiler',':login',':startup'
 project(':MvvmCentaur').projectDir=new File('modles_base/MvvmCentaur')
 project(':annotation').projectDir=new File('modles_base/annotation')
 project(':compiler').projectDir=new File('modles_base/compiler')
 project(':login').projectDir=new File('modles_main/login')
+project(':startup').projectDir=new File('modles_base/startup')
