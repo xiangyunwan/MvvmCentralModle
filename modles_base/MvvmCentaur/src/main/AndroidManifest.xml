@@ -22,7 +22,8 @@
 
         <activity
             android:name="com.mobile.centaur.h5container.ui.Bridge_WebViewActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:process=":web"/>
         <activity
             android:name="com.pizidea.imagepicker.ui.activity.ImageCropActivity"
             android:screenOrientation="portrait" />
